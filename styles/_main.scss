@@ -1,0 +1,27 @@
+#banner {
+  background: $color-light-teal;
+
+  nav {
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        margin: 0 1.5em;
+      }
+
+      &.btn-wrapper {
+        li {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  .major {
+    max-width: 760px;
+  }
+}

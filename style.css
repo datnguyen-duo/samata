@@ -1,0 +1,2 @@
+*{box-sizing:border-box;margin:0;padding:0}html,body{overflow-x:hidden}h1,h2,h3,h5,h6{color:#001a3a}h1{font-size:95px}ul li{list-style:none}a{color:#02a09e;text-decoration:none}a.btn{display:inline-block;text-align:center;color:#fff;padding:15px 30px;background:#01b0ae;border-radius:5px}#banner{background:#dffdfb}#banner nav{display:flex;padding:1em;justify-content:space-between}#banner nav ul{display:flex;align-items:center}#banner nav ul li{margin:0 1.5em}#banner nav ul.btn-wrapper li{margin:0 10px}#banner .major{max-width:760px}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  // font-family: $font-body;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  //   font-family: $font-heading;
+  color: $color-navy;
+}
+
+h1 {
+  font-size: 95px;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  color: $color-teal;
+  text-decoration: none;
+
+  &.btn {
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    padding: 15px 30px;
+    background: $color-btn;
+    border-radius: 5px;
+    // font-size: 20px;
+  }
+}
