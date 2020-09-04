@@ -22,11 +22,9 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 16px;
   overflow-x: auto;
-  @media screen and (max-width: $tablet-breakpoint) {
-    font-size: 16px;
-  }
+
   ul {
     display: flex;
     align-items: center;
