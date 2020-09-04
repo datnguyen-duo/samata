@@ -1,5 +1,11 @@
 gsap.registerPlugin(ScrollToPlugin);
 
+$(function () {
+  $("#banner .has-play-btn").click(function () {
+    $("#platform video").trigger("play");
+  });
+});
+
 function nextSlide() {
   let nextSlide = $(".next-slide");
   let content = nextSlide.find(".content");
