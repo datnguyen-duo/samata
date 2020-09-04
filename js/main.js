@@ -72,7 +72,7 @@ $(function () {
     }
 
     sections.each(function (i) {
-      if ($(this).position().top < $(window).scrollTop() + 50) {
+      if ($(this).position().top < $(window).scrollTop() + 100) {
         $(".sub-nav li.active").removeClass("active");
         $(".sub-nav li").eq(i).addClass("active");
       }
