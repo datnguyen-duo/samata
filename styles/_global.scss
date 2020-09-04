@@ -7,20 +7,53 @@
 html,
 body {
   overflow-x: hidden;
-  // font-family: $font-body;
+  font-family: $font-body;
+  font-weight: 500;
+  color: $color-body;
 }
 
 h1,
 h2,
 h3,
-h5,
+h4,
 h6 {
-  //   font-family: $font-heading;
+  font-family: $font-heading;
   color: $color-navy;
+  font-weight: 500;
 }
 
 h1 {
-  font-size: 95px;
+  font-size: 4.5vw;
+  line-height: 1.05;
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+h2 {
+  font-size: 56px;
+}
+
+h3 {
+  font-size: 42px;
+}
+
+h4 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 24px;
+  margin: 0 0 0.2em 0;
+  font-weight: 500;
+}
+
+h6 {
+  color: #81858b;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 ul {
@@ -40,6 +73,96 @@ a {
     padding: 15px 30px;
     background: $color-btn;
     border-radius: 5px;
-    // font-size: 20px;
+    white-space: nowrap;
+    &.white-bg {
+      color: $color-teal;
+      background: #fff;
+    }
   }
+}
+
+img {
+  width: 100%;
+}
+
+.has-underline {
+  position: relative;
+  &:before {
+    content: url("/assets/underline.svg");
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.has-highlight {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 50%;
+    background: $color-light-teal;
+  }
+}
+
+.has-play-btn {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  &:before {
+    content: url("/assets/play-btn.svg");
+    margin-right: 15px;
+  }
+}
+
+.center {
+  width: 100%;
+  text-align: center;
+  // margin-bottom: 1em;
+}
+
+.blue-text {
+  color: $color-blue-text;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.v-line {
+  height: 115px;
+  width: 0;
+  margin: 25px 0 25px -2px;
+  border-radius: 2px;
+  border-right: 2px dashed $color-blue-text;
+}
+
+.caret-down {
+  width: 15px;
+  height: 15px;
+}
+
+.container {
+  max-width: $content-wrap;
+  padding: 0 20px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.disable-click {
+  pointer-events: none;
 }
