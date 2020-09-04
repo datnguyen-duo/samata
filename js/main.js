@@ -86,6 +86,7 @@ $(function () {
   let val1 = $(".val-1");
   let val2 = $(".val-2");
   let val3 = $(".val-3");
+  let bg = $(".tracker .bg");
 
   track.draggable({
     axis: "x",
@@ -114,6 +115,7 @@ $(function () {
       val1.text(v1);
       val2.text(v2);
       val3.text(v3);
+      bg.css("width", trackPos);
     },
   });
 });

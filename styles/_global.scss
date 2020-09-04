@@ -8,8 +8,9 @@ html,
 body {
   overflow-x: hidden;
   font-family: $font-body;
-  font-weight: 500;
+  // font-weight: 500;
   color: $color-body;
+  // font-size: 18px;
 }
 
 h1,
@@ -32,25 +33,24 @@ h1 {
 }
 
 h2 {
-  font-size: 56px;
+  font-size: 46px;
 }
 
 h3 {
-  font-size: 42px;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 0.2em 0;
+  line-height: 1.2;
 }
 
 h4 {
-  font-size: 36px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: $font-body;
+  line-height: 1.6;
 }
 
 h5 {
-  font-size: 24px;
-  margin: 0 0 0.2em 0;
-  font-weight: 500;
-}
-
-h6 {
   color: #81858b;
   font-size: 22px;
   font-weight: 400;
@@ -65,19 +65,41 @@ ul {
 a {
   color: $color-teal;
   text-decoration: none;
+}
 
-  &.btn {
-    display: inline-block;
-    text-align: center;
-    color: #fff;
-    padding: 15px 30px;
-    background: $color-btn;
-    border-radius: 5px;
-    white-space: nowrap;
-    &.white-bg {
-      color: $color-teal;
-      background: #fff;
-    }
+input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 26, 58, 0.3);
+  font-family: $font-body;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 2px;
+  width: 100%;
+
+  ::placeholder {
+    opacity: 0.5;
+  }
+}
+
+button {
+  box-shadow: none;
+  border: none;
+  font-family: $font-body;
+  font-size: 16px;
+  width: 225px;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  padding: 13px 26px;
+  background: $color-btn;
+  border-radius: 5px;
+  white-space: nowrap;
+  &.white-bg {
+    color: $color-teal;
+    background: #fff;
   }
 }
 
@@ -150,9 +172,12 @@ img {
 
 .container {
   max-width: $content-wrap;
-  padding: 0 20px;
+  padding: 0 100px;
   display: flex;
   margin: 0 auto;
+  @media screen and (max-width: $tablet-breakpoint) {
+    padding: 0 30px;
+  }
 }
 
 .row {

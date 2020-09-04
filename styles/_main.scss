@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-
+  overflow-x: scroll;
   @media screen and (max-width: $tablet-breakpoint) {
     font-size: 16px;
   }
@@ -17,8 +17,10 @@ nav {
       height: 100%;
       display: flex;
       align-items: center;
+      white-space: nowrap;
       &.logo {
-        max-width: 200px;
+        max-width: 180px;
+        min-width: 150px;
         @media screen and (max-width: $tablet-breakpoint) {
           max-width: 150px;
         }
@@ -29,6 +31,11 @@ nav {
       margin-right: 2em;
       li {
         margin: 0 10px;
+        &.active {
+          &:before {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -94,19 +101,20 @@ nav {
   .container {
     justify-content: space-around;
     align-items: center;
-    padding: 0 2em 70px;
+    padding: 2em 2em 70px;
     @media screen and (max-width: $tablet-breakpoint) {
       padding: 50px 2em;
     }
     @media screen and (max-width: $mobile-breakpoint) {
       flex-direction: column;
+      padding: 10px 2em 50px;
     }
     .major {
       max-width: 38vw;
       @media screen and (max-width: $mobile-breakpoint) {
         order: 1;
         max-width: 100%;
-        margin-top: 5em;
+        margin-top: 3em;
       }
       aside {
         display: flex;
@@ -126,21 +134,25 @@ nav {
 
     .minor {
       position: relative;
-      padding: 3vw 0 0;
-      max-width: 28vw;
+      padding: 2vw 0 0;
+      max-width: 26vw;
       @media screen and (max-width: $mobile-breakpoint) {
         max-width: 60vw;
       }
       aside {
         position: absolute;
-        max-width: 14vw;
+        max-width: 16vw;
         @media screen and (max-width: $mobile-breakpoint) {
-          max-width: 35vw;
+          max-width: 47vw;
         }
         &.b1 {
-          top: 0;
+          top: -35px;
           left: 0;
-          transform: translateX(-20%);
+          transform: translateX(-50%);
+          @media screen and (max-width: $mobile-breakpoint) {
+            top: 16px;
+            transform: translateX(-40%);
+          }
         }
 
         &.b2 {
@@ -148,28 +160,33 @@ nav {
           right: 0;
           bottom: 0;
           margin: auto;
-          height: 8vw;
+          height: 8.5vw;
           transform: translateX(50%);
+          @media screen and (max-width: $mobile-breakpoint) {
+            height: 26.5vw;
+            transform: translateX(40%);
+          }
         }
 
         &.b3 {
-          left: 40px;
-          bottom: -20px;
+          left: 5px;
+          bottom: -3vw;
           margin: auto;
           @media screen and (max-width: $mobile-breakpoint) {
             left: 20px;
+            bottom: -8vw;
           }
         }
       }
       p {
-        margin-left: 17vw;
+        margin-left: 16vw;
+        margin-top: 2vw;
         padding-right: 20px;
         font-size: 16px;
         white-space: nowrap;
 
         @media screen and (max-width: $mobile-breakpoint) {
-          transform: translateY(250%);
-          margin-left: 10vw;
+          display: none;
         }
 
         &:before {
@@ -260,7 +277,7 @@ nav {
       flex-direction: column;
       align-items: center;
       margin-bottom: 4em;
-      h4 {
+      h3 {
         span {
           color: $color-teal;
         }
@@ -316,7 +333,7 @@ nav {
                 width: 40px;
               }
             }
-            h4 {
+            h3 {
               margin: 0 1em 0 0.5em;
             }
             h5 {
@@ -346,12 +363,21 @@ nav {
   color: #fff;
   display: flex;
   align-items: center;
+  margin-bottom: 200px;
   @media screen and (max-width: 900px) {
     flex-direction: column;
+    margin-bottom: 100px;
   }
   h2,
   h3 {
     color: #fff;
+    @media screen and (max-width: 900px) {
+      margin: 5px 0;
+    }
+  }
+
+  h2 {
+    height: 50px;
   }
   .minor {
     margin: 0 auto;
@@ -368,7 +394,8 @@ nav {
         padding-left: 90px;
         @media screen and (max-width: 900px) {
           flex-wrap: wrap;
-          padding-left: 75px;
+          padding-left: 0;
+
           &:last-of-type {
             margin-bottom: 0;
           }
@@ -376,7 +403,6 @@ nav {
         .icon {
           width: 60px;
           height: 60px;
-          background: rgba(47, 112, 177, 0.2);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -384,9 +410,12 @@ nav {
           border-radius: 50%;
           left: 0;
           @media screen and (max-width: 900px) {
+            position: static;
             top: 10px;
             width: 55px;
             height: 55px;
+            margin-right: 11px;
+            margin-top: 13px;
           }
         }
 
@@ -394,11 +423,14 @@ nav {
           margin: 0 30px 0 0;
           @media screen and (max-width: 900px) {
             margin: 0;
+            &:last-of-type {
+              margin-top: 10px;
+            }
           }
           p {
             font-weight: 400;
             @media screen and (max-width: 900px) {
-              margin: 0 0 15px;
+              margin: 0;
             }
             span.blue-text {
               font-weight: 500;
@@ -421,6 +453,8 @@ nav {
     }
     @media screen and (max-width: 900px) {
       order: -1;
+      max-width: 100%;
+      padding: 0;
     }
     .img-wrapper {
       margin-bottom: -10%;
@@ -428,12 +462,15 @@ nav {
       min-height: 620px;
       @media screen and (max-width: 900px) {
         min-height: unset;
+        height: 335px;
+        display: flex;
       }
       img {
         min-height: 620px;
         object-fit: cover;
         @media screen and (max-width: 900px) {
           min-height: unset;
+          object-position: 100% 65%;
         }
       }
     }
@@ -446,16 +483,27 @@ nav {
       flex-direction: column;
       align-items: flex-end;
       justify-content: center;
+      @media screen and (max-width: 900px) {
+        position: relative;
+        flex-direction: row;
+      }
       figure {
         max-width: 18vw;
         margin: 2em 0;
+        @media screen and (max-width: 900px) {
+          margin: 0 30px;
+          max-width: 100%;
+          &:last-of-type {
+            margin-left: 0;
+          }
+        }
       }
     }
   }
 }
 
 #how-it-works {
-  margin: 200px 0 100px;
+  margin: 100px 0;
   header {
     width: 100%;
     text-align: center;
@@ -476,6 +524,7 @@ nav {
   }
   .container {
     justify-content: space-between;
+    flex-wrap: wrap;
 
     @media screen and (max-width: $mobile-breakpoint) {
       flex-direction: column;
@@ -503,11 +552,15 @@ nav {
           bottom: 65px;
           right: -100px;
           max-width: 490px;
+          @media screen and (max-width: $tablet-breakpoint) {
+            padding: 30px;
+            right: -85px;
+            max-width: 410px;
+          }
           @media screen and (max-width: $mobile-breakpoint) {
             position: static;
-            padding: 30px;
           }
-          h5 {
+          h4 {
             margin-bottom: 1em;
           }
         }
@@ -516,11 +569,14 @@ nav {
 
     .major {
       max-width: 40%;
+      @media screen and (max-width: $tablet-breakpoint) {
+        max-width: 45%;
+      }
       @media screen and (max-width: $mobile-breakpoint) {
         max-width: 100%;
       }
       .row {
-        margin: 2em 0;
+        margin: 1em 0;
         &:first-of-type {
           margin-top: 0;
         }
@@ -534,13 +590,13 @@ nav {
             width: 60px;
           }
 
-          h4 {
-            max-width: 450px;
+          h3 {
+            max-width: 400px;
           }
         }
 
         .icon {
-          margin-right: 10px;
+          margin-right: 20px;
           min-width: 20px;
         }
       }
@@ -549,6 +605,55 @@ nav {
         height: 2px;
         background: $color-navy;
         margin: 3em 0;
+      }
+    }
+
+    .steps {
+      width: 100%;
+      background: $color-light-teal;
+      margin-top: 8em;
+      padding-bottom: 4em;
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 4em 0;
+        .icon {
+          max-width: 70px;
+          margin-right: 15px;
+        }
+      }
+
+      .row {
+        justify-content: space-between;
+        @media screen and (max-width: $mobile-breakpoint) {
+          flex-direction: column;
+        }
+        .col {
+          align-items: center;
+          margin: 0 20px;
+          text-align: center;
+          @media screen and (max-width: $mobile-breakpoint) {
+            margin: 0 20px 5em;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+          .inner {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            .icon {
+              max-width: 125px;
+            }
+            .arrow {
+              margin: 0 20px;
+              @media screen and (max-width: $mobile-breakpoint) {
+                margin: 0 10px;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -677,11 +782,11 @@ nav {
         align-items: center;
 
         @media screen and (max-width: $mobile-breakpoint) {
-          padding-left: 20px;
-          padding-right: 20px;
+          padding-left: 30px;
+          padding-right: 30px;
         }
 
-        h5 {
+        h4 {
           color: #fff;
         }
         &:first-of-type {
@@ -783,6 +888,10 @@ nav {
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        .icon {
+          max-width: 45px;
+          margin-left: 10px;
+        }
       }
     }
   }
@@ -802,6 +911,14 @@ nav {
         height: 10px;
         border: 1px solid $color-grey;
         border-radius: 0.5rem;
+        .bg {
+          width: 0;
+          position: absolute;
+          left: 0;
+          height: 100%;
+          background: $color-light-teal;
+          border-radius: 0.5rem;
+        }
         .track {
           position: absolute;
           left: 0;
@@ -812,6 +929,7 @@ nav {
           height: 40px;
           background: $color-navy;
           border-radius: 2em;
+          cursor: pointer;
           &:before {
             content: url("/assets/caret-down.svg");
             transform: rotate(90deg);
