@@ -1,8 +1,28 @@
+body {
+  &.active-cursor {
+    cursor: none;
+    .cursor {
+      opacity: 1;
+    }
+  }
+  .cursor {
+    height: 55px;
+    width: 55px;
+    position: fixed;
+    background: $color-teal;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 99;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-  overflow-x: scroll;
+  overflow-x: auto;
   @media screen and (max-width: $tablet-breakpoint) {
     font-size: 16px;
   }
@@ -246,6 +266,7 @@ nav {
 
 #platform {
   margin: 100px 0 0;
+
   .container {
     flex-direction: column;
     align-items: center;
@@ -257,11 +278,8 @@ nav {
 
   .slider {
     background: $color-light-teal;
-    padding-bottom: 250px;
     position: relative;
-    @media screen and (max-width: $mobile-breakpoint) {
-      padding-bottom: 150px;
-    }
+
     &:before {
       content: "";
       position: absolute;
@@ -272,6 +290,7 @@ nav {
       background: $color-light-teal;
       z-index: -1;
     }
+
     header {
       display: flex;
       flex-direction: column;
@@ -286,7 +305,12 @@ nav {
 
     .slides {
       margin-left: -10vw;
+
       .slick-list {
+        padding-bottom: 250px !important;
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding-bottom: 150px !important;
+        }
         .slick-track {
           display: flex;
         }

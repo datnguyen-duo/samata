@@ -131,5 +131,42 @@ $(function () {
     variableWidth: true,
     infinite: false,
     centerMode: true,
+    slide: ".slide",
+  });
+});
+
+$(function () {
+  var cursor = $(".cursor");
+  var posX = 0,
+    posY = 0,
+    mouseX = 0,
+    mouseY = 0;
+
+  gsap.to({}, 0.016, {
+    repeat: -1,
+    onRepeat: function () {
+      posX += (mouseX - posX) / 2;
+      posY += (mouseY - posY) / 2;
+
+      gsap.set(cursor, {
+        css: {
+          left: mouseX - 27,
+          top: mouseY - 27,
+        },
+      });
+    },
+  });
+
+  $("body").on("mousemove", function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  $("#platform .slider").on("mouseenter", function () {
+    $("body").addClass("active-cursor");
+  });
+
+  $("#platform .slider").on("mouseleave", function () {
+    $("body").removeClass("active-cursor");
   });
 });
