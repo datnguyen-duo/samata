@@ -9,12 +9,13 @@ body {
     height: 55px;
     width: 55px;
     position: fixed;
-    background: $color-teal;
     border-radius: 50%;
     opacity: 0;
     z-index: 99;
     pointer-events: none;
     transition: opacity 0.3s;
+    background: $color-teal url("/assets/arrow-white.svg") no-repeat;
+    background-position: 50% 50%;
   }
 }
 
@@ -72,7 +73,7 @@ nav {
     background: #fff;
     transform: translateY(-100%);
     transition: transform 0.5s ease-in-out;
-    z-index: 3;
+    z-index: 9;
     box-shadow: 0 4px 2px -2px rgba(129, 133, 139, 0.3);
     &.active {
       transform: translateY(0);
@@ -542,6 +543,7 @@ nav {
     margin-bottom: 7em;
 
     ul {
+      position: relative;
       display: flex;
       justify-content: space-between;
       margin: 4em auto 0;
@@ -551,6 +553,25 @@ nav {
 
       @media screen and (max-width: $mobile-breakpoint) {
         max-width: 400px;
+      }
+
+      li {
+        cursor: pointer;
+        opacity: 0.2;
+        transition: all 0.3s;
+
+        &.has-underline {
+          position: absolute;
+          width: 130px;
+          height: 32px;
+          left: 20px;
+          opacity: 1;
+          pointer-events: none;
+        }
+
+        &.active {
+          opacity: 1;
+        }
       }
     }
   }
@@ -570,30 +591,60 @@ nav {
       .img-wrapper {
         position: relative;
         height: 100%;
+        .screen {
+          width: 0%;
+          position: absolute;
+          right: 0;
+          height: 100%;
+          background: $color-navy;
+          z-index: 2;
+        }
         img {
           height: 100%;
           object-fit: cover;
           @media screen and (max-width: $mobile-breakpoint) {
             height: unset;
           }
+
+          &.img__therapists {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            left: 0;
+          }
         }
         aside {
           background: $color-teal;
-          padding: 40px;
           position: absolute;
           bottom: 65px;
           right: -100px;
           max-width: 490px;
+          z-index: 3;
           @media screen and (max-width: $tablet-breakpoint) {
-            padding: 30px;
             right: -85px;
             max-width: 410px;
           }
           @media screen and (max-width: $mobile-breakpoint) {
-            position: static;
+            position: relative;
+            bottom: unset;
+            right: unset;
+          }
+
+          & > div {
+            padding: 40px;
+            @media screen and (max-width: $tablet-breakpoint) {
+              padding: 30px;
+            }
           }
           h4 {
             margin-bottom: 1em;
+          }
+
+          .aside__therapists {
+            position: absolute;
+            opacity: 0;
+            left: 0;
+            top: 0;
           }
         }
       }
@@ -601,12 +652,29 @@ nav {
 
     .major {
       max-width: 40%;
+      position: relative;
       @media screen and (max-width: $tablet-breakpoint) {
         max-width: 45%;
       }
       @media screen and (max-width: $mobile-breakpoint) {
         max-width: 100%;
       }
+
+      .major__therapists {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+
+        @media screen and (max-width: $mobile-breakpoint) {
+          bottom: unset;
+        }
+      }
+
       .row {
         margin: 1em 0;
         &:first-of-type {
@@ -620,6 +688,7 @@ nav {
 
           .icon {
             width: 60px;
+            margin-top: 0;
           }
 
           h3 {
@@ -630,6 +699,7 @@ nav {
         .icon {
           margin-right: 20px;
           min-width: 20px;
+          margin-top: 10px;
         }
       }
       .line {

@@ -87,6 +87,70 @@ $(function () {
 });
 
 $(function () {
+  let employers = $("#how-it-works ul .employers");
+  let therapists = $("#how-it-works ul .therapists");
+  let underline = $("#how-it-works ul .has-underline");
+  let screen = $("#how-it-works .screen");
+  let imgTherapists = $(".img__therapists");
+  let asideEmployers = $(".aside__employers");
+  let asideTherapists = $(".aside__therapists");
+  let majorTherapists = $(".major__therapists");
+  let majorEmployers = $(".major__employers");
+
+  function initTherapists() {
+    var tl = gsap.timeline();
+
+    tl.to(screen, 0.5, { width: "100%", ease: "power1.inOut" });
+    tl.to(asideEmployers, { opacity: 0 }, "-=.5");
+    tl.set(imgTherapists, { opacity: 1 });
+    tl.set(screen, { left: "0" });
+    tl.to(screen, { width: "0%", ease: "power1.inOut" });
+    tl.to(asideTherapists, { opacity: 1 }, "-=.5");
+    tl.set(screen, { clearProps: "all" });
+
+    gsap.to(majorEmployers, { opacity: 0 });
+    gsap.to(majorTherapists, { opacity: 1, delay: 0.5 });
+  }
+
+  function initEmployers() {
+    var tl = gsap.timeline();
+
+    tl.to(screen, 0.5, { width: "100%", ease: "power1.inOut" });
+    tl.to(asideTherapists, { opacity: 0 }, "-=.5");
+    tl.set(imgTherapists, { opacity: 0 });
+    tl.set(screen, { left: "0" });
+    tl.to(screen, { width: "0%", ease: "power1.inOut" });
+    tl.to(asideEmployers, { opacity: 1 }, "-=.5");
+    tl.set(screen, { clearProps: "all" });
+
+    gsap.to(majorTherapists, { opacity: 0 });
+    gsap.to(majorEmployers, { opacity: 1, delay: 0.5 });
+  }
+
+  employers.click(function () {
+    if ($(this).hasClass("active")) {
+      return false;
+    } else {
+      therapists.removeClass("active");
+      $(this).addClass("active");
+      underline.css("left", "20px");
+      initEmployers();
+    }
+  });
+
+  therapists.click(function () {
+    if ($(this).hasClass("active")) {
+      return false;
+    } else {
+      employers.removeClass("active");
+      $(this).addClass("active");
+      underline.css("left", "calc(100% - 150px)");
+      initTherapists();
+    }
+  });
+});
+
+$(function () {
   let track = $(".track");
   let num = $(".tracker .num");
   let val1 = $(".val-1");
@@ -138,6 +202,10 @@ $(function () {
     infinite: false,
     centerMode: true,
     slide: ".slide",
+  });
+
+  slider.click(function () {
+    slider.slick("slickNext");
   });
 });
 
