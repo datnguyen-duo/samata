@@ -135,7 +135,10 @@
       <div class="slider">
         <header>
           <div class="v-line"></div>
-          <h3><span>Start</span> Match Book</h3>
+          <h3>
+            <span class="active">Start</span> <span>Match</span>
+            <span>Book</span>
+          </h3>
         </header>
 
         <div class="slides">
@@ -207,7 +210,7 @@
               <img src="/assets/90-Icon.svg" alt="90-icon" />
             </div>
             <div class="col">
-              <h2>90</h2>
+              <h2 data-count="90" class="counter">00</h2>
               <p>Percent</p>
             </div>
             <div class="col">
@@ -223,7 +226,7 @@
               <img src="/assets/50-Icon.svg" alt="50-icon" />
             </div>
             <div class="col">
-              <h2>50</h2>
+              <h2 data-count="50" class="counter">00</h2>
               <p>Percent</p>
             </div>
             <div class="col">
@@ -239,7 +242,7 @@
               <img src="/assets/3Min-Icon.svg" alt="3min-icon" />
             </div>
             <div class="col">
-              <h2>03</h2>
+              <h2>0<span data-count="3" class="counter">0</span></h2>
               <p>Minutes</p>
             </div>
             <div class="col">
@@ -489,8 +492,8 @@
               <div class="inner">
                 <div class="icon">
                   <img
-                    src="/assets/HowItWorks-Employee.svg"
-                    alt="HowItWorks-Employee"
+                    src="/assets/Icon-Employer.svg"
+                    alt="HowItWorks-Employer"
                   />
                 </div>
                 <div class="arrow">
@@ -551,12 +554,50 @@
     </section>
 
     <section id="testimonials">
-      <header>
+      <header class="navy">
         <div class="wrap">
           <div class="icon">
-            <img src="/assets/clients-icon.svg" alt="clients-icon" />
+            <img
+              class="navy-icon"
+              src="/assets/Testimonials-navy.svg"
+              alt="clients-icon"
+            />
+            <img
+              class="green-icon"
+              src="/assets/Testimonials-green.svg"
+              alt="clients-icon"
+            />
+            <img
+              class="blue-icon"
+              src="/assets/Testimonials-blue.svg"
+              alt="clients-icon"
+            />
           </div>
-          <h2 class="has-underline">Our Happy Clients</h2>
+          <h2>Our Happy Clients</h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="93.045"
+            height="10.535"
+            viewBox="0 0 93.045 10.535"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: none;
+                  stroke: inherit;
+                  stroke-miterlimit: 10;
+                  stroke-width: 3px;
+                }
+              </style>
+            </defs>
+            <g transform="translate(0 1.5)">
+              <path
+                class="a"
+                d="M852.938-251.888c11.63,0,11.63-7.535,23.26-7.535s11.63,7.535,23.261,7.535,11.631-7.535,23.262-7.535,11.631,7.535,23.262,7.535"
+                transform="translate(-852.938 259.423)"
+              />
+            </g>
+          </svg>
         </div>
       </header>
       <div class="slider">

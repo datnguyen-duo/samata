@@ -160,7 +160,7 @@ nav {
       }
       aside {
         position: absolute;
-        max-width: 16vw;
+        max-width: 18vw;
         @media screen and (max-width: $mobile-breakpoint) {
           max-width: 47vw;
         }
@@ -188,7 +188,7 @@ nav {
         }
 
         &.b3 {
-          left: 5px;
+          left: -35px;
           bottom: -3vw;
           margin: auto;
           @media screen and (max-width: $mobile-breakpoint) {
@@ -245,7 +245,7 @@ nav {
         }
       }
       .img-wrapper {
-        height: 465px;
+        height: 72%;
         @media screen and (max-width: $mobile-breakpoint) {
           height: unset;
         }
@@ -257,7 +257,10 @@ nav {
         }
       }
       .content {
-        margin: 2em 0;
+        margin: 1em 0 2em;
+        @media screen and (max-width: $mobile-breakpoint) {
+          margin: 2em 0 2em;
+        }
       }
     }
   }
@@ -301,7 +304,10 @@ nav {
       margin-bottom: 4em;
       h3 {
         span {
-          color: $color-teal;
+          transition: all 0.3s;
+          &.active {
+            color: $color-teal;
+          }
         }
       }
     }
@@ -613,7 +619,7 @@ nav {
           position: absolute;
           bottom: 65px;
           right: -100px;
-          max-width: 490px;
+          max-width: 450px;
           z-index: 3;
           @media screen and (max-width: $tablet-breakpoint) {
             right: -85px;
@@ -709,7 +715,7 @@ nav {
       width: 100%;
       background: $color-light-teal;
       margin-top: 8em;
-      padding-bottom: 4em;
+      padding: 0 30px 4em;
       header {
         display: flex;
         justify-content: center;
@@ -796,11 +802,68 @@ nav {
         max-width: 450px;
       }
 
+      svg {
+        height: 15px;
+        transition: all 0.3s 0.3s;
+      }
+
       h2 {
         color: #fff;
+        margin-top: 10px;
+        margin-bottom: 25px;
       }
       .icon {
+        position: relative;
         width: 80px;
+
+        img {
+          opacity: 0;
+          transition: all 0.3s 0.3s;
+        }
+
+        .green-icon,
+        .blue-icon {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+
+    &.navy {
+      .wrap {
+        svg {
+          stroke: $color-blue-text;
+        }
+        .icon {
+          .navy-icon {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &.green {
+      .wrap {
+        svg {
+          stroke: $color-light-teal;
+        }
+        .icon {
+          .green-icon {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &.blue {
+      .wrap {
+        svg {
+          stroke: $color-navy;
+        }
+        .icon {
+          .blue-icon {
+            opacity: 1;
+          }
+        }
       }
     }
   }
@@ -872,7 +935,7 @@ nav {
         background: $color-teal;
       }
       &.three {
-        background: $color-grey;
+        background: $color-blue-text;
       }
 
       .col {
