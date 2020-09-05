@@ -16,6 +16,10 @@ body {
     transition: opacity 0.3s;
     background: $color-teal url("/assets/arrow-white.svg") no-repeat;
     background-position: 50% 50%;
+
+    &.last-slide {
+      transform: rotate(180deg);
+    }
   }
 }
 

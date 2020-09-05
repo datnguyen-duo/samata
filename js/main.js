@@ -55,18 +55,25 @@ $(function () {
 
   slider.click(function () {
     slider.slick("slickNext");
+
+    if ($(".cursor").hasClass("last-slide")) {
+      slider.slick("slickGoTo", 0);
+    }
   });
 
   slider.on("afterChange", function (event, slick, currentSlide, nextSlide) {
     if (currentSlide < 1) {
       $("#platform .slider header h3 span").removeClass("active");
       $("#platform .slider header h3 span:first-of-type").addClass("active");
+      $(".cursor").removeClass("last-slide");
     } else if (currentSlide == 1) {
       $("#platform .slider header h3 span").removeClass("active");
       $("#platform .slider header h3 span:nth-child(2)").addClass("active");
-    } else if (currentSlide > 1) {
+      $(".cursor").removeClass("last-slide");
+    } else if (currentSlide == 2) {
       $("#platform .slider header h3 span").removeClass("active");
       $("#platform .slider header h3 span:last-of-type").addClass("active");
+      $(".cursor").addClass("last-slide");
     }
   });
 });
