@@ -53,7 +53,7 @@ $(function () {
     slide: ".slide",
   });
 
-  slider.click(function () {
+  $("#platform .slider").click(function () {
     slider.slick("slickNext");
 
     if ($(".cursor").hasClass("last-slide")) {
