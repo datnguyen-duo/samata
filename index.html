@@ -36,7 +36,7 @@
     <nav class="sub-nav">
       <ul class="anchor-links">
         <li class="logo">
-          <a href="#">
+          <a href="/">
             <img src="/assets/Samata Health_logo.svg" alt="logo" />
           </a>
         </li>
@@ -47,31 +47,59 @@
         <li class="testimonials">Happy Clients</li>
       </ul>
       <ul class="btn-wrapper">
-        <li><a href="#" class="btn white-bg">Request a Demo</a></li>
-        <li><a href="#" class="btn white-bg">Contact Us</a></li>
+        <li>
+          <a
+            href="mailto:austin@samatahealth.com?subject=Request a Demo"
+            class="btn white-bg"
+            >Request a Demo</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://app.samatahealth.com/search-options"
+            class="btn white-bg"
+            >Find a Therapist</a
+          >
+        </li>
       </ul>
     </nav>
     <section id="banner">
       <nav>
         <ul>
           <li class="logo">
-            <a href="#">
+            <a href="/">
               <img src="/assets/Samata Health_logo.svg" alt="logo" />
             </a>
           </li>
           <li><a href="#">Support Center</a></li>
-          <li><a href="#">Find a Therapist</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
         </ul>
         <ul class="btn-wrapper">
-          <li><a href="#" class="btn white-bg">Request a Demo</a></li>
-          <li><a href="#" class="btn white-bg">Contact Us</a></li>
+          <li>
+            <a
+              href="mailto:austin@samatahealth.com?subject=Request a Demo"
+              class="btn white-bg"
+              >Request a Demo</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://app.samatahealth.com/search-options"
+              class="btn white-bg"
+              >Find a Therapist</a
+            >
+          </li>
         </ul>
       </nav>
       <div class="container">
         <div class="major">
           <h1>Progressive Mental Health Care at Your Fingertips</h1>
           <aside>
-            <a href="#" class="btn">Request a Demo</a>
+            <a
+              href="mailto:austin@samatahealth.com?subject=Request a Demo"
+              class="btn"
+              >Request a Demo</a
+            >
             <a href="#platform" class="has-play-btn"> See How it Works</a>
           </aside>
         </div>
@@ -104,7 +132,7 @@
             <h3>For Employers</h3>
             <p>Our Premium, Progressive Employee Mental Health Benefit</p>
           </div>
-          <a href="#" class="btn">Learn More</a>
+          <a href="#" class="btn" target="employers">Learn More</a>
         </div>
         <div class="col">
           <div class="img-wrapper">
@@ -114,7 +142,7 @@
             <h3>For Individuals</h3>
             <p>Our Public-Facing Platform for Individual Therapy-Seekers</p>
           </div>
-          <a href="#" class="btn">Learn More</a>
+          <a href="#" class="btn" target="individuals">Learn More</a>
         </div>
       </div>
     </section>
@@ -282,10 +310,11 @@
     <section id="how-it-works">
       <header>
         <h2>How it Works</h2>
-        <ul>
+        <ul class="toggle">
           <li class="has-underline"></li>
           <li class="employers active"><h4>For Employers</h4></li>
           <li class="therapists"><h4>For Therapists</h4></li>
+          <li class="individuals"><h4>For Individuals</h4></li>
         </ul>
       </header>
       <div class="container">
@@ -294,13 +323,18 @@
             <div class="screen"></div>
             <img
               class="img__employers"
-              src="/assets/people-looking-at-computer.png"
-              alt="people-looking-at-computer"
+              src="/assets/meeting-people-smiling.png"
+              alt="meeting-people-smiling"
             />
             <img
               class="img__therapists"
-              src="/assets/therapist-group-session.png"
-              alt="therapist-group-session"
+              src="/assets/woman-crossing-arms-smiling.png"
+              alt="woman-crossing-arms-smiling"
+            />
+            <img
+              class="img__individuals"
+              src="/assets/woman-glasses-smiling.png"
+              alt="woman-glasses-smiling"
             />
             <aside>
               <div class="aside__employers">
@@ -308,14 +342,26 @@
                   Say Hello To Your Happier, Healthier And More Productive
                   Workforce
                 </h4>
-                <a href="#" class="btn white-bg">Request a Demo</a>
+                <a
+                  href="mailto:austin@samatahealth.com?subject=Request a Demo"
+                  class="btn white-bg"
+                  >Request a Demo</a
+                >
               </div>
               <div class="aside__therapists">
                 <h4 class="white-text">
                   You Support Your Clients.<br />
                   We’ll Support You!
                 </h4>
-                <a href="#" class="btn white-bg">Apply Now</a>
+                <a href="/contact.html#apply" class="btn white-bg">Apply Now</a>
+              </div>
+              <div class="aside__individuals">
+                <h4 class="white-text">Start Feeling Better Today!</h4>
+                <a
+                  href="https://app.samatahealth.com/search-options"
+                  class="btn white-bg"
+                  >Find a Therapist</a
+                >
               </div>
             </aside>
           </div>
@@ -378,7 +424,7 @@
                 <img src="/assets/checkmark.svg" alt="icon" />
               </div>
               <div class="col">
-                <h4>Care Customized For Your Workforce + Budget</h4>
+                <h4>Care Customized For Your Team + Budget</h4>
                 <p>
                   We know mental health, but you know your employees. We’ll work
                   together to customize a plan that best meets their needs.
@@ -430,6 +476,54 @@
                 <p>
                   Charge up to $150 per 45-minute therapy session and get paid
                   within a week of each appointment.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="major__individuals">
+            <div class="row header">
+              <div class="icon">
+                <img src="/assets/Icon-WhySamata.svg" alt="icon" />
+              </div>
+              <h3>Why Work With Us</h3>
+            </div>
+            <div class="row">
+              <div class="icon">
+                <img src="/assets/checkmark.svg" alt="icon" />
+              </div>
+              <div class="col">
+                <h4>Affordable</h4>
+                <p>
+                  High-quality therapy shouldn’t be a luxury. Therapists on our
+                  platform all agree to see Samata Health clients for less than
+                  half the average cost per therapy session in New York City!
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="icon">
+                <img src="/assets/checkmark.svg" alt="icon" />
+              </div>
+              <div class="col">
+                <h4>Digital</h4>
+                <p>
+                  You know best how to run your practice. We’ll never tell you
+                  which clients to take on or how to treat them.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="icon">
+                <img src="/assets/checkmark.svg" alt="icon" />
+              </div>
+              <div class="col">
+                <h4>Diverse</h4>
+                <p>
+                  Looking for a therapist who identifies as male? Latinx?
+                  Jewish? Our team of 75+ licensed NYC therapists is diverse in
+                  every way. Just enter your preferences and we’ll automatically
+                  recommend the best matches for you!
                 </p>
               </div>
             </div>
@@ -629,22 +723,23 @@
           </div>
           <div class="col content">
             <h4>
-              Samata Health has been a fantastic partner in supporting our team
-              and we've had a positive experience working together!
+              Samata Health has been a fantastic partner in supporting our team!
             </h4>
           </div>
         </div>
         <div class="slide three">
           <div class="col">
-            <div class="logo">logo</div>
-            <p>name</p>
+            <div class="logo rounded">
+              <img src="/assets/istock-50043332.jpg" alt="ken-b" />
+            </div>
+            <p>Ken B, Brooklyn</p>
           </div>
           <div class="col content">
             <h4>
-              TESTIMONIAL 3 “Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Nulla pharetra volutpat turpis vitae molestie. Nulla nec
-              nibh eu tellus ullamcorper posuere at at diam. Duis vehicula
-              fermentum dolor, in imperdiet odio.”
+              I was so tired of being put on wait lists for in-network
+              therapists. It was really easy to book a session on Samata's
+              platform, and it's awesome that their therapists all have
+              transparent, affordable rates.
             </h4>
           </div>
         </div>
@@ -706,33 +801,44 @@
               help by calling the 24-hour National Suicide Prevention Lifeline
               at 1 (800) 273-8255, call 911, or go to your nearest emergency
               room. Please do not use Samata Health’s platform as it is not
-              equipped with first-responders that can immediately provide help
+              equipped with first-responders who can immediately provide help
               and safety.
             </p>
             <ul class="col">
               <p>Employers</p>
-              <li><a href="#">Request a Demo</a></li>
-              <li><a href="#">Contact</a></li>
+              <li>
+                <a href="mailto:austin@samatahealth.com?subject=Request a Demo"
+                  >Request a Demo</a
+                >
+              </li>
+              <li><a href="/contact.html#employers">Contact Us</a></li>
             </ul>
             <ul class="col">
               <p>Therapists</p>
-              <li><a href="#">Apply</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="/contact.html#apply">Apply</a></li>
+              <li><a href="/contact.html#therapists">Contact Us</a></li>
             </ul>
             <ul class="col">
-              <p>Therapy Seekers</p>
-              <li><a href="#">Find a Therapist</a></li>
-              <li><a href="#">Contact</a></li>
+              <p>Therapy-Seekers</p>
+              <li>
+                <a href="https://app.samatahealth.com/search-options"
+                  >Find a Therapist</a
+                >
+              </li>
+              <li><a href="/contact.html#individuals">Contact Us</a></li>
             </ul>
             <ul class="col">
               <p>Resources</p>
-              <li><a href="#">Help Center/FAQ</a></li>
+              <li><a href="#">Support Center</a></li>
               <li><a href="#">Newsletter</a></li>
             </ul>
             <ul class="col media">
               <p>Find Us On</p>
               <li>
-                <a href="#"
+                <a
+                  href="https://www.linkedin.com/company/samatahealth/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   ><img
                     src="/assets/LinkedIn-Icon.svg"
                     alt="LinkedIn-Icon"
@@ -740,7 +846,10 @@
                 >
               </li>
               <li>
-                <a href="#"
+                <a
+                  href="https://www.facebook.com/samatahealth/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   ><img
                     src="/assets/Facebook-Icon.svg"
                     alt="Facebook-Icon"
@@ -748,7 +857,10 @@
                 >
               </li>
               <li>
-                <a href="#"
+                <a
+                  href="https://www.instagram.com/samatahealth/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   ><img
                     src="/assets/Instagram-Icon.svg"
                     alt="Instagram-Icon"
@@ -763,6 +875,7 @@
         <div class="container">
           <p>Copyright © 2020 Samata Health. All Rights Reserved</p>
           <div class="links">
+            <a href="mailto:info@samatahealth.com">Email Us</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Cookie Policy</a>
           </div>

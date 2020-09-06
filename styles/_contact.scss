@@ -1,0 +1,101 @@
+body.contact {
+  #landing {
+    nav {
+      ul {
+        &.btn-wrapper {
+          li {
+            a {
+              border: 1px solid $color-teal;
+            }
+          }
+        }
+      }
+    }
+
+    .container {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 7em;
+        @media screen and (max-width: $tablet-breakpoint) {
+          margin-bottom: 5em;
+        }
+        ul.toggle {
+          margin-top: 2em;
+        }
+      }
+
+      .minor {
+        max-width: 40%;
+        @media screen and (max-width: $tablet-breakpoint) {
+          max-width: 35%;
+        }
+        @media screen and (max-width: $mobile-breakpoint) {
+          max-width: 100%;
+          text-align: center;
+          margin-bottom: 2em;
+        }
+        h1 {
+          margin: 0.5em 0 10px;
+        }
+      }
+      .major {
+        max-width: 45%;
+
+        @media screen and (max-width: $tablet-breakpoint) {
+          max-width: 50%;
+        }
+        @media screen and (max-width: $mobile-breakpoint) {
+          max-width: 100%;
+        }
+        .intro {
+          margin-bottom: 10px;
+        }
+        .form-wrapper {
+          margin-top: 3em;
+          @media screen and (max-width: $tablet-breakpoint) {
+            margin-top: 2em;
+          }
+          input {
+            margin-bottom: 1.5em;
+          }
+        }
+
+        aside {
+          margin-top: 2em;
+          width: 100%;
+          background: $color-light-teal;
+          padding: 40px;
+          text-align: center;
+          border-radius: 5px;
+          @media screen and (max-width: $tablet-breakpoint) {
+            padding: 30px;
+          }
+
+          a {
+            display: block;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    @media screen and (max-width: $mobile-breakpoint) {
+      padding-top: 0;
+    }
+    .top {
+      background: $color-light-teal;
+      .container {
+        aside {
+          border-top: none;
+          margin-top: 0;
+          //   padding:
+        }
+      }
+    }
+  }
+}

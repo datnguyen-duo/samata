@@ -75,10 +75,10 @@ input {
   font-weight: 500;
   padding: 10px 2px;
   width: 100%;
+}
 
-  ::placeholder {
-    opacity: 0.5;
-  }
+::placeholder {
+  opacity: 0.3;
 }
 
 button {
@@ -87,6 +87,7 @@ button {
   font-family: $font-body;
   font-size: 16px;
   width: 225px;
+  cursor: pointer;
 }
 
 .btn {
@@ -190,4 +191,49 @@ img {
 
 .disable-click {
   pointer-events: none;
+}
+
+.rounded {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 180px !important;
+  @media screen and (max-width: $mobile-breakpoint) {
+    width: 120px !important;
+  }
+}
+
+ul.toggle {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 4em auto 0;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    max-width: 400px;
+  }
+
+  li {
+    cursor: pointer;
+    opacity: 0.2;
+    transition: all 0.3s;
+
+    &.has-underline {
+      position: absolute;
+      width: 130px;
+      height: 32px;
+      left: 20px;
+      opacity: 1;
+      pointer-events: none;
+      @media screen and (max-width: $mobile-breakpoint) {
+        height: 64px;
+      }
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
 }

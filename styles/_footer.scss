@@ -163,7 +163,6 @@ footer {
       }
 
       .links {
-        width: 225px;
         display: flex;
         justify-content: flex-end;
         @media screen and (max-width: $mobile-breakpoint) {
@@ -173,9 +172,10 @@ footer {
         a {
           color: #fff;
           white-space: nowrap;
+          margin-right: 25px;
 
-          &:first-of-type {
-            margin-right: 20px;
+          &:last-of-type {
+            margin-right: 0;
           }
         }
       }
