@@ -257,15 +257,16 @@ nav {
       }
       .img-wrapper {
         height: 72%;
+        display: flex;
         @media screen and (max-width: $mobile-breakpoint) {
           height: unset;
         }
-        img {
-          height: 100%;
-          @media screen and (max-width: $mobile-breakpoint) {
-            height: unset;
-          }
-        }
+        // img {
+        //   height: 100%;
+        //   @media screen and (max-width: $mobile-breakpoint) {
+        //     height: unset;
+        //   }
+        // }
       }
       .content {
         margin: 1em 0 2em;
@@ -557,12 +558,14 @@ nav {
   .container {
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
 
     @media screen and (max-width: $mobile-breakpoint) {
       flex-direction: column;
     }
     .minor {
       max-width: 40%;
+      // min-width: 550px;
       @media screen and (max-width: $mobile-breakpoint) {
         max-width: 100%;
         margin-bottom: 4em;
@@ -570,6 +573,7 @@ nav {
       .img-wrapper {
         position: relative;
         height: 100%;
+        max-height: 675px;
         .screen {
           width: 0%;
           position: absolute;
@@ -579,11 +583,11 @@ nav {
           z-index: 2;
         }
         img {
-          height: 100%;
-          object-fit: cover;
-          @media screen and (max-width: $mobile-breakpoint) {
-            height: unset;
-          }
+          // height: 100%;
+          // object-fit: cover;
+          // @media screen and (max-width: $mobile-breakpoint) {
+          //   height: unset;
+          // }
 
           &.img__therapists,
           &.img__individuals {
@@ -597,7 +601,7 @@ nav {
         aside {
           background: $color-teal;
           position: absolute;
-          bottom: 65px;
+          bottom: 2vw;
           right: -100px;
           max-width: 450px;
           z-index: 3;
@@ -743,7 +747,7 @@ nav {
               max-width: 125px;
             }
             .arrow {
-              margin: 0 20px;
+              margin: 0 15px;
               @media screen and (max-width: $mobile-breakpoint) {
                 margin: 0 10px;
               }
@@ -1064,6 +1068,7 @@ nav {
     flex-direction: column;
     .tracker {
       margin-top: 6em;
+      width: 100%;
       .bar {
         position: relative;
         width: 100%;
