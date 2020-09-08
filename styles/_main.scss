@@ -28,6 +28,7 @@ nav {
   justify-content: space-between;
   font-size: 16px;
   overflow-x: auto;
+  height: 80px;
 
   ul {
     display: flex;
@@ -235,6 +236,9 @@ nav {
 
 #products {
   padding: 100px 0;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: 0;
+  }
 
   h2 {
     margin-bottom: 1em;
@@ -712,7 +716,7 @@ nav {
       width: 100%;
       background: $color-light-teal;
       margin-top: 8em;
-      padding: 0 30px 4em;
+      padding: 0 30px 2em;
       header {
         display: flex;
         justify-content: center;
@@ -724,8 +728,35 @@ nav {
         }
       }
 
+      .row-container {
+        position: relative;
+        .note {
+          text-align: center;
+          width: 100%;
+          margin-top: 3em;
+          font-size: 15px;
+          color: $color-navy;
+          font-style: italic;
+          opacity: 0;
+        }
+      }
+
       .row {
         justify-content: space-between;
+        transition: all 0.3s;
+
+        &.therapists,
+        &.employers {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          opacity: 0;
+        }
+
+        &.individuals {
+          flex-wrap: wrap;
+        }
         @media screen and (max-width: $mobile-breakpoint) {
           flex-direction: column;
         }
@@ -734,7 +765,7 @@ nav {
           margin: 0 20px;
           text-align: center;
           @media screen and (max-width: $mobile-breakpoint) {
-            margin: 0 20px 5em;
+            margin: 0 10px 5em;
             &:last-of-type {
               margin-bottom: 0;
             }
@@ -742,15 +773,19 @@ nav {
           .inner {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-bottom: 1em;
             .icon {
-              max-width: 125px;
+              max-width: 34%;
             }
             .arrow {
               margin: 0 15px;
-              @media screen and (max-width: $mobile-breakpoint) {
-                margin: 0 10px;
+              @media screen and (max-width: $laptop-breakpoint) {
+                margin: 0 5px;
               }
+              // @media screen and (max-width: $mobile-breakpoint) {
+              //   margin: 0 10px;
+              // }
             }
           }
         }
