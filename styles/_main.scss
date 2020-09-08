@@ -647,6 +647,12 @@ nav {
               margin-top: auto;
             }
           }
+
+          .btn {
+            &:hover {
+              background: $color-navy;
+            }
+          }
         }
       }
     }
@@ -796,6 +802,7 @@ nav {
             }
             .arrow {
               margin: 0 15px;
+              width: 50px;
               @media screen and (max-width: $laptop-breakpoint) {
                 margin: 0 5px;
               }
@@ -1002,7 +1009,7 @@ nav {
           align-items: center;
           flex-direction: column;
           position: absolute;
-          left: calc(50% - 120px);
+          left: calc(50% - 100px);
           @media screen and (max-width: $laptop-breakpoint) {
             left: calc(50% - 90px);
           }
@@ -1019,7 +1026,7 @@ nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 240px;
+            width: 200px;
             margin-bottom: 10px;
             @media screen and (max-width: $laptop-breakpoint) {
               width: 180px;

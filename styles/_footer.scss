@@ -22,7 +22,7 @@ footer {
         }
 
         .img-wrapper {
-          max-width: 335px;
+          max-width: 300px;
           @media screen and (max-width: $mobile-breakpoint) {
             margin: 0 auto;
           }
@@ -116,10 +116,23 @@ footer {
             margin-right: 0;
             a {
               display: flex;
+
+              &:hover {
+                img {
+                  &.hover {
+                    opacity: 1;
+                  }
+                }
+              }
               img {
                 width: 25px;
                 height: 25px;
                 margin-right: 10px;
+                transition: all 0.3s;
+                &.hover {
+                  position: absolute;
+                  opacity: 0;
+                }
               }
             }
           }

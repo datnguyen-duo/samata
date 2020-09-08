@@ -52,7 +52,7 @@ h4 {
 
 h5 {
   color: #81858b;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -98,9 +98,19 @@ button {
   background: $color-btn;
   border-radius: 5px;
   white-space: nowrap;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $color-navy;
+  }
   &.white-bg {
     color: $color-teal;
     background: #fff;
+    &:hover {
+      color: #fff;
+
+      background: $color-teal;
+    }
   }
 }
 
@@ -138,9 +148,24 @@ img {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  position: relative;
+  transition: all 0.3s;
+  &:hover {
+    color: $color-navy;
+    &::after {
+      opacity: 1;
+    }
+  }
   &:before {
     content: url("/assets/play-btn.svg");
     margin-right: 15px;
+  }
+  &::after {
+    content: url("/assets/Play-icon-navy.svg");
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
   }
 }
 
@@ -196,10 +221,7 @@ img {
 .rounded {
   border-radius: 50%;
   overflow: hidden;
-  width: 180px !important;
-  @media screen and (max-width: $mobile-breakpoint) {
-    width: 120px !important;
-  }
+  width: 120px !important;
 }
 
 ul.toggle {
