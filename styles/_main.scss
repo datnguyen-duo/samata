@@ -739,11 +739,31 @@ nav {
           font-style: italic;
           opacity: 0;
         }
+
+        &.init__employers {
+          .employers {
+            opacity: 1;
+          }
+        }
+        &.init__therapists {
+          .therapists {
+            opacity: 1;
+          }
+        }
+        &.init__individuals {
+          .individuals {
+            opacity: 1;
+          }
+          .note {
+            opacity: 1;
+          }
+        }
       }
 
       .row {
         justify-content: space-between;
         transition: all 0.3s;
+        opacity: 0;
 
         &.therapists,
         &.employers {
@@ -751,12 +771,8 @@ nav {
           top: 0;
           left: 0;
           width: 100%;
-          opacity: 0;
         }
 
-        &.individuals {
-          flex-wrap: wrap;
-        }
         @media screen and (max-width: $mobile-breakpoint) {
           flex-direction: column;
         }

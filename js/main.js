@@ -212,8 +212,14 @@ $(function () {
 
   let majors = $("#how-it-works .container .major > div");
 
+  let rowContainer = $("#how-it-works .row-container ");
+
   function initEmployers() {
-    var tl = gsap.timeline();
+    var tl = gsap.timeline({
+      onStart: function () {
+        rowContainer.attr("class", "row-container init__employers");
+      },
+    });
 
     tl.to(screen, 0.5, { width: "100%", ease: "power1.inOut" });
     tl.to(asides, { opacity: 0, pointerEvents: "none" }, "-=.5");
@@ -230,8 +236,11 @@ $(function () {
   }
 
   function initTherapists() {
-    var tl = gsap.timeline();
-
+    var tl = gsap.timeline({
+      onStart: function () {
+        rowContainer.attr("class", "row-container init__therapists");
+      },
+    });
     tl.to(screen, 0.5, { width: "100%", ease: "power1.inOut" });
     tl.to(asides, { opacity: 0, pointerEvents: "none" }, "-=.5");
     tl.set(imgIndividuals, { opacity: 0 });
@@ -247,8 +256,11 @@ $(function () {
   }
 
   function initIndividuals() {
-    var tl = gsap.timeline();
-
+    var tl = gsap.timeline({
+      onStart: function () {
+        rowContainer.attr("class", "row-container init__individuals");
+      },
+    });
     tl.to(screen, 0.5, { width: "100%", ease: "power1.inOut" });
     tl.to(asides, { opacity: 0, pointerEvents: "none" }, "-=.5");
     tl.set(imgTherapists, { opacity: 0 });
