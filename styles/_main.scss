@@ -899,7 +899,7 @@ nav {
   min-height: 650px;
   position: relative;
   @media screen and (max-width: $mobile-breakpoint) {
-    min-height: 750px;
+    min-height: 620px;
   }
   header {
     width: 75%;
@@ -1074,8 +1074,8 @@ nav {
         align-items: center;
 
         @media screen and (max-width: $mobile-breakpoint) {
-          padding-left: 30px;
-          padding-right: 30px;
+          padding-left: 20px;
+          padding-right: 20px;
         }
 
         h4 {

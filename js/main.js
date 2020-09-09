@@ -68,6 +68,18 @@ $(function () {
   $("#banner .has-play-btn").click(function () {
     $("#platform video").trigger("play");
   });
+
+  gsap.from("#platform", {
+    scrollTrigger: {
+      trigger: "#platform",
+      start: "top 30%",
+      once: true,
+      markers: { startColor: "green", endColor: "red", fontSize: "12px" },
+      onEnter: function () {
+        $("#platform video").trigger("play");
+      },
+    },
+  });
 });
 
 $(function () {

@@ -28,6 +28,7 @@ h1 {
   line-height: 1.05;
   @media screen and (max-width: $mobile-breakpoint) {
     font-size: 36px;
+    text-align: center;
   }
 }
 
