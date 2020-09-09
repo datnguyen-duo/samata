@@ -928,9 +928,6 @@ nav {
       width: 100%;
 
       @media screen and (max-width: $laptop-breakpoint) {
-        max-width: 500px;
-      }
-      @media screen and (max-width: $tablet-breakpoint) {
         max-width: 450px;
       }
 
@@ -1023,7 +1020,7 @@ nav {
         flex-direction: column;
         width: 0;
         overflow: hidden;
-        padding-top: calc(5vw + 300px);
+        padding-top: calc(5vw + 200px);
       }
       &.active {
         width: 75%;
@@ -1107,6 +1104,9 @@ nav {
             margin-bottom: 10px;
             &.rounded {
               margin-top: -30px;
+              @media screen and (max-width: $mobile-breakpoint) {
+                margin-top: 0;
+              }
             }
             @media screen and (max-width: $laptop-breakpoint) {
               width: 145px;

@@ -428,6 +428,8 @@ function nextSlide() {
   tl.set(nextSlide, { left: 0 });
   if ($(window).width() > 767) {
     tl.to(nextSlide, { width: "75%", ease: "power1.inOut" });
+  } else {
+    tl.to(nextSlide, { width: "100%", ease: "power1.inOut" });
   }
   if ($(window).width() < 1025) {
     tl.to(logo, { left: "calc(37.2vw - 360px)", ease: "power1.inOut" }, "-=1");
