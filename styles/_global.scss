@@ -34,6 +34,10 @@ h1 {
 
 h2 {
   font-size: 46px;
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 32px;
+    text-align: center;
+  }
 }
 
 h3 {
@@ -86,13 +90,16 @@ a {
 
   &:hover {
     background: $color-navy;
+    color: #fff;
+    a {
+      color: #fff;
+    }
   }
   &.white-bg {
     color: $color-teal;
     background: #fff;
     &:hover {
       color: #fff;
-
       background: $color-teal;
     }
   }

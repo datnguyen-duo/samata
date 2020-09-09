@@ -896,7 +896,7 @@ nav {
   min-height: 650px;
   position: relative;
   @media screen and (max-width: $mobile-breakpoint) {
-    min-height: 850px;
+    min-height: 750px;
   }
   header {
     width: 75%;
@@ -1291,6 +1291,58 @@ nav {
         }
         &:last-of-type {
           margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+body.privacy-policy {
+  #landing {
+    nav ul.btn-wrapper li a {
+      border: 1px solid $color-teal;
+    }
+    header {
+      margin: 3em 0 4em;
+      width: 100%;
+      text-align: center;
+
+      h1 {
+        margin-bottom: 0.2em;
+      }
+    }
+  }
+
+  article {
+    margin: 0 0 3em;
+
+    ul {
+      padding-left: 20px;
+      li {
+        list-style: initial;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  h3,
+  h4 {
+    margin-bottom: 0.5em;
+  }
+  h4 {
+    margin-top: 1.5em;
+  }
+  p {
+    margin-bottom: 0.2em;
+  }
+
+  footer {
+    .top {
+      background: $color-light-teal;
+      .container {
+        aside {
+          margin-top: 0;
+          border: none;
         }
       }
     }
