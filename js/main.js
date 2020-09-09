@@ -74,7 +74,6 @@ $(function () {
       trigger: "#platform",
       start: "top 30%",
       once: true,
-      markers: { startColor: "green", endColor: "red", fontSize: "12px" },
       onEnter: function () {
         $("#platform video").trigger("play");
       },
