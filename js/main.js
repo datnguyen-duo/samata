@@ -235,8 +235,13 @@ $(function () {
     tl.to(asideEmployers, { opacity: 1, pointerEvents: "initial" }, "-=.5");
     tl.set(screen, { clearProps: "all" });
 
-    gsap.to(majors, { opacity: 0 });
-    gsap.to(majorEmployers, { opacity: 1, delay: 0.5 });
+    if ($(window).width() < 768) {
+      gsap.to(majors, { display: "none" });
+      gsap.to(majorEmployers, { display: "flex" });
+    } else {
+      gsap.to(majors, { opacity: 0 });
+      gsap.to(majorEmployers, { opacity: 1, delay: 0.5 });
+    }
   }
 
   function initTherapists() {
@@ -255,8 +260,13 @@ $(function () {
     tl.to(asideTherapists, { opacity: 1, pointerEvents: "initial" }, "-=.5");
     tl.set(screen, { clearProps: "all" });
 
-    gsap.to(majors, { opacity: 0 });
-    gsap.to(majorTherapists, { opacity: 1, delay: 0.5 });
+    if ($(window).width() < 768) {
+      gsap.to(majors, { display: "none" });
+      gsap.to(majorTherapists, { display: "flex" });
+    } else {
+      gsap.to(majors, { opacity: 0 });
+      gsap.to(majorTherapists, { opacity: 1, delay: 0.5 });
+    }
   }
 
   function initIndividuals() {
@@ -275,8 +285,13 @@ $(function () {
     tl.to(asideIndividuals, { opacity: 1, pointerEvents: "initial" }, "-=.5");
     tl.set(screen, { clearProps: "all" });
 
-    gsap.to(majors, { opacity: 0 });
-    gsap.to(majorIndividuals, { opacity: 1, delay: 0.5 });
+    if ($(window).width() < 768) {
+      gsap.to(majors, { display: "none" });
+      gsap.to(majorIndividuals, { display: "flex" });
+    } else {
+      gsap.to(majors, { opacity: 0 });
+      gsap.to(majorIndividuals, { opacity: 1, delay: 0.5 });
+    }
   }
 
   employers.click(function () {

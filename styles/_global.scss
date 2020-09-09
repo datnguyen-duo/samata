@@ -65,6 +65,10 @@ ul {
 a {
   color: $color-teal;
   text-decoration: none;
+  transition: all 0.3s;
+  &:hover {
+    color: $color-navy;
+  }
 }
 
 .btn {

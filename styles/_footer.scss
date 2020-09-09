@@ -156,6 +156,10 @@ footer {
             a {
               color: $color-body;
               white-space: nowrap;
+
+              &:hover {
+                color: $color-navy;
+              }
             }
           }
         }
@@ -198,6 +202,9 @@ footer {
           color: #fff;
           white-space: nowrap;
           margin-right: 25px;
+          &:hover {
+            color: $color-navy;
+          }
           @media screen and (max-width: $mobile-breakpoint) {
             margin: 0;
             padding: 0.5em 0;

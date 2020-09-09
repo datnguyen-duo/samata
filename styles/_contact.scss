@@ -1,9 +1,9 @@
 body.contact {
   #landing {
-    margin-bottom: 100px;
-    @media screen and (max-width: $mobile-breakpoint) {
-      margin-bottom: 50px;
-    }
+    // margin-bottom: 100px;
+    // @media screen and (max-width: $mobile-breakpoint) {
+    //   margin-bottom: 50px;
+    // }
     nav {
       ul {
         &.btn-wrapper {
@@ -32,10 +32,8 @@ body.contact {
       flex-wrap: wrap;
       justify-content: space-between;
       .minor {
-        max-width: 45%;
-        @media screen and (max-width: $tablet-breakpoint) {
-          max-width: 35%;
-        }
+        max-width: 35%;
+
         @media screen and (max-width: $mobile-breakpoint) {
           max-width: 100%;
           text-align: center;
