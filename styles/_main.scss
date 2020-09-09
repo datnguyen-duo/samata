@@ -265,14 +265,6 @@ nav {
         }
       }
 
-      @media not all and (min-resolution: 0.001dpcm) {
-        @supports (-webkit-appearance: none) {
-          .img-wrapper {
-            height: unset;
-          }
-        }
-      }
-
       .img-wrapper {
         height: 72%;
         display: flex;
@@ -289,13 +281,6 @@ nav {
         // }
       }
 
-      @media not all and (min-resolution: 0.001dpcm) {
-        @supports (-webkit-appearance: none) {
-          .content {
-            margin: 0em 0 2em;
-          }
-        }
-      }
       .content {
         margin: 1em 0 2em;
 
@@ -1348,6 +1333,25 @@ body.privacy-policy {
           border: none;
         }
       }
+    }
+  }
+}
+
+// safari only
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    #numbers .major .img-wrapper {
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    #products .container .col .img-wrapper {
+      height: unset;
+      display: block;
     }
   }
 }
