@@ -358,6 +358,9 @@ nav {
 
       .slick-list {
         padding-bottom: 150px !important;
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding-bottom: 50px !important;
+        }
 
         .slick-track {
           display: flex;
@@ -387,9 +390,9 @@ nav {
             }
 
             @media screen and (max-width: $mobile-breakpoint) {
-              max-width: 70vw;
-              text-align: center;
-              justify-content: center;
+              max-width: 65vw;
+              // text-align: center;
+              // justify-content: center;
             }
 
             .icon {
