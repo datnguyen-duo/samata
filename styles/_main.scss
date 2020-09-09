@@ -259,14 +259,19 @@ nav {
           margin-bottom: 5em;
         }
       }
+
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+          .img-wrapper {
+            height: unset;
+          }
+        }
+      }
+
       .img-wrapper {
         height: 72%;
         display: flex;
-        _::-webkit-full-page-media,
-        _:future,
-        :root .safari_only {
-          height: unset;
-        }
+
         @media screen and (max-width: $mobile-breakpoint) {
           height: unset;
         }
@@ -277,13 +282,17 @@ nav {
         //   }
         // }
       }
+
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+          .content {
+            margin: 0em 0 2em;
+          }
+        }
+      }
       .content {
         margin: 1em 0 2em;
-        _::-webkit-full-page-media,
-        _:future,
-        :root .safari_only {
-          margin: 0em 0 2em;
-        }
+
         @media screen and (max-width: $mobile-breakpoint) {
           margin: 2em 0 2em;
         }
