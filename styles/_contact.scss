@@ -1,9 +1,9 @@
 body.contact {
   #landing {
     // margin-bottom: 100px;
-    // @media screen and (max-width: $mobile-breakpoint) {
-    //   margin-bottom: 50px;
-    // }
+    @media screen and (max-width: $mobile-breakpoint) {
+      margin-bottom: 50px;
+    }
     nav {
       ul {
         &.btn-wrapper {
@@ -42,6 +42,9 @@ body.contact {
         h1 {
           margin: 0.5em 0 10px;
           font-size: 3.5vw;
+          @media screen and (max-width: $mobile-breakpoint) {
+            font-size: 36px;
+          }
         }
         .row {
           position: relative;
@@ -62,12 +65,8 @@ body.contact {
         }
       }
       .major {
-        max-width: 45%;
+        max-width: 55%;
         position: relative;
-
-        @media screen and (max-width: $tablet-breakpoint) {
-          max-width: 55%;
-        }
         @media screen and (max-width: $mobile-breakpoint) {
           max-width: 100%;
         }
