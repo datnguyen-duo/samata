@@ -520,6 +520,7 @@ nav {
       margin-bottom: -10%;
       margin-right: -10px;
       min-height: 620px;
+      height: 100%;
       @media screen and (max-width: 900px) {
         min-height: unset;
         height: 335px;
@@ -531,6 +532,7 @@ nav {
         @media screen and (max-width: 900px) {
           min-height: unset;
           object-position: 100% 65%;
+          height: 100%;
         }
       }
     }
