@@ -551,7 +551,7 @@ nav {
       img {
         min-height: 620px;
         object-fit: cover;
-        // height: 100%;
+        height: auto;
 
         @media screen and (max-width: 900px) {
           min-height: unset;
