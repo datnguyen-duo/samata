@@ -31,7 +31,6 @@ body.contact {
     .container {
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
       .minor {
         max-width: 45%;
         @media screen and (max-width: $tablet-breakpoint) {

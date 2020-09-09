@@ -819,6 +819,9 @@ nav {
             margin-bottom: 1em;
             .icon {
               max-width: 34%;
+              &.lg {
+                max-width: 112px;
+              }
               @media screen and (max-width: $mobile-breakpoint) {
                 max-width: 40%;
               }
