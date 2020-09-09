@@ -3,6 +3,10 @@ footer {
   padding: 120px 0 0;
   font-weight: 400;
 
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 70px 0 0;
+  }
+
   .top {
     .container {
       flex-wrap: wrap;
@@ -24,7 +28,8 @@ footer {
         .img-wrapper {
           max-width: 280px;
           @media screen and (max-width: $mobile-breakpoint) {
-            margin: 0 auto;
+            margin: 0;
+            max-width: 220px;
           }
         }
 
@@ -33,11 +38,15 @@ footer {
           max-width: 380px;
 
           @media screen and (max-width: $tablet-breakpoint) {
-            margin: 1em auto 0;
-            text-align: center;
+            margin: 1.5em 0 0;
+            text-align: left;
           }
           h2 {
             margin-bottom: 10px;
+
+            @media screen and (max-width: $mobile-breakpoint) {
+              margin-bottom: 5px;
+            }
           }
         }
       }

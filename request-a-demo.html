@@ -116,10 +116,19 @@
                     <div class="formkit-field half-field">
                       <input
                         class="formkit-input"
-                        aria-label="Full Name"
+                        aria-label="First Name"
                         name="fields[first_name]"
                         required=""
-                        placeholder="Full Name"
+                        placeholder="First Name"
+                        type="text"
+                      />
+                    </div>
+                    <div class="formkit-field half-field">
+                      <input
+                        class="formkit-input"
+                        aria-label="Last Name"
+                        name="fields[last_name]"
+                        placeholder="Last Name"
                         type="text"
                       />
                     </div>
@@ -142,15 +151,6 @@
                         type="text"
                       />
                     </div>
-                    <div class="formkit-field half-field">
-                      <input
-                        class="formkit-input"
-                        aria-label="Phone Number"
-                        name="fields[phone]"
-                        placeholder="Phone Number"
-                        type="text"
-                      />
-                    </div>
                     <div class="formkit-field">
                       <input
                         class="formkit-input"
@@ -159,6 +159,34 @@
                         placeholder="Message"
                         type="text"
                       />
+                    </div>
+                    <div class="formkit-field hidden">
+                      <div role="button" tabindex="0">
+                        <fieldset
+                          data-group="checkboxes"
+                          class="formkit-1097"
+                          group="field"
+                          type="Custom"
+                          order="5"
+                          save_as="Tag"
+                        >
+                          <div
+                            class="formkit-checkboxes"
+                            data-element="tags-checkboxes"
+                            data-group="checkbox"
+                          >
+                            <input
+                              class="formkit-checkbox"
+                              id="tag-1097-1842826"
+                              type="checkbox"
+                              name="tags[]"
+                              value="1842826"
+                            /><label for="tag-1097-1842826"
+                              >Request a Demo (Employer)</label
+                            >
+                          </div>
+                        </fieldset>
+                      </div>
                     </div>
                     <button
                       data-element="submit"

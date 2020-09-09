@@ -63,3 +63,7 @@ $(function () {
     }
   }, 50);
 });
+
+$(function () {
+  $(".hidden input[type='checkbox'").prop("checked", true);
+});

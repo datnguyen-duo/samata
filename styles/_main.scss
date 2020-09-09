@@ -678,6 +678,18 @@ nav {
             left: 0;
             top: 0;
             pointer-events: none;
+
+            @media screen and (max-width: $mobile-breakpoint) {
+              max-width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              height: 100%;
+              .btn {
+                margin-top: unset;
+              }
+            }
           }
           .aside__individuals {
             height: 100%;
@@ -687,6 +699,9 @@ nav {
 
             .btn {
               margin-top: auto;
+              @media screen and (max-width: $mobile-breakpoint) {
+                margin-top: unset;
+              }
             }
           }
 
@@ -709,6 +724,10 @@ nav {
         max-width: 100%;
       }
 
+      & > div {
+        flex-direction: column;
+      }
+
       .major__therapists,
       .major__individuals {
         position: absolute;
@@ -716,7 +735,7 @@ nav {
         right: 0;
         bottom: 0;
         display: flex;
-        flex-direction: column;
+
         justify-content: center;
         opacity: 0;
 
@@ -745,6 +764,7 @@ nav {
           .icon {
             width: 60px;
             margin-top: 0;
+            min-width: 60px;
           }
 
           h3 {

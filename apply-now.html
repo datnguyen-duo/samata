@@ -123,6 +123,7 @@
                         class="formkit-input"
                         aria-label="First Name"
                         name="fields[first_name]"
+                        required=""
                         placeholder="First Name"
                         type="text"
                       />
@@ -146,15 +147,7 @@
                         type="email"
                       />
                     </div>
-                    <div class="formkit-field half-field">
-                      <input
-                        class="formkit-input"
-                        aria-label="Phone"
-                        name="fields[phone]"
-                        placeholder="Phone"
-                        type="text"
-                      />
-                    </div>
+
                     <div class="formkit-field half-field">
                       <input
                         class="formkit-input"
@@ -167,28 +160,27 @@
                     <div class="formkit-field half-field">
                       <input
                         class="formkit-input"
+                        aria-label="License Type"
+                        name="fields[license_type]"
+                        placeholder="License Type"
+                        type="text"
+                      />
+                    </div>
+                    <div class="formkit-field half-field">
+                      <input
+                        class="formkit-input"
                         aria-label="License Number"
                         name="fields[null]"
                         placeholder="License Number"
                         type="text"
                       />
                     </div>
-                    <div class="formkit-field half-field">
-                      <input
-                        class="formkit-input"
-                        aria-label="License Type"
-                        name="fields[license_type]"
-                        placeholder="License Type (optional)"
-                        type="text"
-                      />
-                    </div>
-
-                    <div class="formkit-field half-field">
+                    <div class="formkit-field">
                       <input
                         class="formkit-input"
                         aria-label="Link to Website"
                         name="fields[null]"
-                        placeholder="Link to Website (optional)"
+                        placeholder="Link to Website"
                         type="text"
                       />
                     </div>
@@ -197,11 +189,39 @@
                         class="formkit-input"
                         aria-label="Tell us a bit about your practice"
                         name="fields[null]"
-                        placeholder="Tell us a bit about your practice (optional)"
+                        placeholder="Tell us a bit about your practice"
                         type="text"
                       />
                     </div>
 
+                    <div class="formkit-field hidden">
+                      <div role="button" tabindex="0">
+                        <fieldset
+                          data-group="checkboxes"
+                          class="formkit-38"
+                          group="field"
+                          type="Custom"
+                          order="9"
+                          save_as="Tag"
+                        >
+                          <div
+                            class="formkit-checkboxes"
+                            data-element="tags-checkboxes"
+                            data-group="checkbox"
+                          >
+                            <input
+                              class="formkit-checkbox"
+                              id="tag-38-1842827"
+                              type="checkbox"
+                              name="tags[]"
+                              value="1842827"
+                            /><label for="tag-38-1842827"
+                              >Apply Now (Therapist)</label
+                            >
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
                     <button
                       data-element="submit"
                       class="formkit-submit formkit-submit btn"

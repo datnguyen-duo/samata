@@ -27,6 +27,17 @@ fieldset {
   border: none;
 }
 
+.hidden {
+  display: none;
+}
+
+.formkit-alert-success {
+  background: $color-teal;
+  padding: 1em;
+  color: #fff;
+  text-align: center;
+}
+
 footer {
   .top {
     .container {
