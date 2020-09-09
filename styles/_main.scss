@@ -353,10 +353,8 @@ nav {
       margin-left: -10vw;
 
       .slick-list {
-        padding-bottom: 250px !important;
-        @media screen and (max-width: $mobile-breakpoint) {
-          padding-bottom: 150px !important;
-        }
+        padding-bottom: 150px !important;
+
         .slick-track {
           display: flex;
         }
@@ -392,7 +390,7 @@ nav {
 
             .icon {
               min-width: 70px;
-
+              width: 70px;
               @media screen and (max-width: $tablet-breakpoint) {
                 min-width: 50px;
                 width: 50px;
@@ -404,7 +402,7 @@ nav {
               }
             }
             h3 {
-              margin: 0 1em 0 0.5em;
+              margin: 0 1.3em 0 0.5em;
             }
             h5 {
               // max-width: 760px;

@@ -230,6 +230,15 @@ ul.toggle {
       left: 20px;
       opacity: 1;
       pointer-events: none;
+
+      &:before {
+        content: "";
+        width: 60px;
+        background: url("/assets/underline.svg") no-repeat;
+        height: 20px;
+        background-position: center;
+        background-size: contain;
+      }
       @media screen and (max-width: $mobile-breakpoint) {
         height: 64px;
         width: 90px;
