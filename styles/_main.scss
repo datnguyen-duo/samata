@@ -257,6 +257,7 @@ nav {
         max-width: 400px;
         &:first-of-type {
           margin-bottom: 5em;
+          margin-top: 5em;
         }
       }
 
@@ -274,6 +275,7 @@ nav {
 
         @media screen and (max-width: $mobile-breakpoint) {
           height: unset;
+          display: block;
         }
         // img {
         //   height: 100%;
@@ -524,6 +526,7 @@ nav {
       order: -1;
       max-width: 100%;
       padding: 0;
+      height: unset;
     }
     .img-wrapper {
       margin-bottom: -10%;
