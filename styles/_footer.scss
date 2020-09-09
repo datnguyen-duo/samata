@@ -59,19 +59,11 @@ footer {
             margin: 1.5em 0 2.5em;
             display: flex;
             align-items: center;
+
             @media screen and (max-width: $mobile-breakpoint) {
               align-items: flex-start;
               flex-direction: column;
-            }
-            .wrap {
-              margin-left: auto;
-              @media screen and (max-width: $mobile-breakpoint) {
-                margin: 1em 0 0;
-              }
-              input {
-                width: unset;
-                margin: 3px 5px 0 auto;
-              }
+              margin-top: 2em;
             }
           }
         }
@@ -199,8 +191,5 @@ footer {
         }
       }
     }
-  }
-
-  .container {
   }
 }

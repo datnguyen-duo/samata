@@ -1,5 +1,6 @@
 body.contact {
   #landing {
+    margin-bottom: 100px;
     nav {
       ul {
         &.btn-wrapper {
@@ -40,15 +41,37 @@ body.contact {
         h1 {
           margin: 0.5em 0 10px;
         }
+        .row {
+          h4 {
+            opacity: 0;
+
+            &.therapists,
+            &.individuals {
+              position: absolute;
+            }
+          }
+        }
       }
       .major {
         max-width: 45%;
+        position: relative;
 
         @media screen and (max-width: $tablet-breakpoint) {
           max-width: 50%;
         }
         @media screen and (max-width: $mobile-breakpoint) {
           max-width: 100%;
+        }
+
+        & > div {
+          opacity: 0;
+
+          &.major__therapists,
+          &.major__individuals {
+            position: absolute;
+            pointer-events: none;
+            top: 0;
+          }
         }
         .intro {
           margin-bottom: 10px;
@@ -64,7 +87,7 @@ body.contact {
         }
 
         aside {
-          margin-top: 2em;
+          margin-top: 5em;
           width: 100%;
           background: $color-light-teal;
           padding: 40px;
@@ -97,5 +120,71 @@ body.contact {
         }
       }
     }
+  }
+
+  &.init__employers {
+    #landing {
+      .container {
+        .minor {
+          .row {
+            h4.employers {
+              opacity: 1;
+            }
+          }
+        }
+        .major {
+          .major__employers {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &.init__therapists {
+    #landing {
+      .container {
+        .minor {
+          .row {
+            h4.therapists {
+              opacity: 1;
+            }
+          }
+        }
+        .major {
+          .major__therapists {
+            opacity: 1;
+            pointer-events: initial;
+          }
+        }
+      }
+    }
+  }
+
+  &.init__individuals {
+    #landing {
+      .container {
+        .minor {
+          .row {
+            h4.individuals {
+              opacity: 1;
+              pointer-events: initial;
+            }
+          }
+        }
+        .major {
+          .major__individuals {
+            opacity: 1;
+            pointer-events: initial;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.single-form {
+  #landing .container .major > div.major__therapists {
+    position: relative;
   }
 }

@@ -5,6 +5,8 @@ $(function () {
 
   let underline = $(".toggle .has-underline");
 
+  let body = $("body.contact");
+
   employers.click(function () {
     if ($(this).hasClass("active")) {
       return false;
@@ -12,6 +14,8 @@ $(function () {
       $(".contact .toggle  li").removeClass("active");
       $(this).addClass("active");
       underline.css("left", "20px");
+
+      body.attr("class", "contact init__employers");
     }
   });
 
@@ -22,6 +26,7 @@ $(function () {
       $(".contact .toggle  li").removeClass("active");
       $(this).addClass("active");
       underline.css("left", "calc(50% - 65px)");
+      body.attr("class", "contact init__therapists");
     }
   });
 
@@ -32,6 +37,21 @@ $(function () {
       $(".contact .toggle  li").removeClass("active");
       $(this).addClass("active");
       underline.css("left", "calc(100% - 150px)");
+      body.attr("class", "contact init__individuals");
     }
   });
+
+  setTimeout(() => {
+    if (window.location.href.indexOf("#employers") > -1) {
+      employers.click();
+    }
+
+    if (window.location.href.indexOf("#therapists") > -1) {
+      therapists.click();
+    }
+
+    if (window.location.href.indexOf("#individuals") > -1) {
+      individuals.click();
+    }
+  }, 50);
 });

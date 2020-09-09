@@ -1106,9 +1106,27 @@ nav {
         @media screen and (max-width: $mobile-breakpoint) {
           width: 35%;
         }
+
+        &:hover {
+          .icon {
+            img.hover {
+              opacity: 1;
+            }
+          }
+        }
         .icon {
           max-width: 45px;
           margin-left: 10px;
+          position: relative;
+
+          img {
+            transition: all 0.3s;
+            &.hover {
+              position: absolute;
+              left: 0;
+              opacity: 0;
+            }
+          }
           @media screen and (max-width: $mobile-breakpoint) {
             max-width: 35px;
           }
