@@ -22,7 +22,7 @@ footer {
         }
 
         .img-wrapper {
-          max-width: 300px;
+          max-width: 280px;
           @media screen and (max-width: $mobile-breakpoint) {
             margin: 0 auto;
           }
@@ -93,10 +93,12 @@ footer {
 
         .legal {
           max-width: 620px;
-          padding-right: 20px;
+          padding-right: 45px;
           margin-right: auto;
+          font-size: 14px;
           @media screen and (max-width: $laptop-breakpoint) {
             margin-bottom: 2em;
+            padding-right: 20px;
           }
 
           @media screen and (max-width: $tablet-breakpoint) {
