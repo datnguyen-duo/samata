@@ -529,10 +529,11 @@ nav {
       img {
         min-height: 620px;
         object-fit: cover;
+        height: 100%;
+
         @media screen and (max-width: 900px) {
           min-height: unset;
           object-position: 100% 65%;
-          height: 100%;
         }
       }
     }
