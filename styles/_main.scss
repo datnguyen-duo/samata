@@ -730,7 +730,7 @@ nav {
         margin: 4em 0;
         .icon {
           max-width: 70px;
-          margin-right: 15px;
+          margin-right: 10px;
         }
       }
 
@@ -787,7 +787,7 @@ nav {
           margin: 0 20px;
           text-align: center;
           @media screen and (max-width: $mobile-breakpoint) {
-            margin: 0 10px 5em;
+            margin: 0 0 5em;
             &:last-of-type {
               margin-bottom: 0;
             }
@@ -799,6 +799,9 @@ nav {
             margin-bottom: 1em;
             .icon {
               max-width: 34%;
+              @media screen and (max-width: $mobile-breakpoint) {
+                max-width: 40%;
+              }
             }
             .arrow {
               margin: 0 15px;

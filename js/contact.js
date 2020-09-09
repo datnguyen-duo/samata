@@ -25,7 +25,11 @@ $(function () {
     } else {
       $(".contact .toggle  li").removeClass("active");
       $(this).addClass("active");
-      underline.css("left", "calc(50% - 65px)");
+      if ($(window).width() < 768) {
+        underline.css("left", "calc(50% - 45px)");
+      } else {
+        underline.css("left", "calc(50% - 65px)");
+      }
       body.attr("class", "contact init__therapists");
     }
   });
@@ -36,7 +40,11 @@ $(function () {
     } else {
       $(".contact .toggle  li").removeClass("active");
       $(this).addClass("active");
-      underline.css("left", "calc(100% - 150px)");
+      if ($(window).width() < 768) {
+        underline.css("left", "calc(100% - 110px)");
+      } else {
+        underline.css("left", "calc(100% - 150px)");
+      }
       body.attr("class", "contact init__individuals");
     }
   });

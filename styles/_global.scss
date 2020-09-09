@@ -219,16 +219,20 @@ ul.toggle {
     cursor: pointer;
     opacity: 0.2;
     transition: all 0.3s;
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 90px;
+    }
 
     &.has-underline {
       position: absolute;
-      width: 130px;
+      width: 115px;
       height: 32px;
       left: 20px;
       opacity: 1;
       pointer-events: none;
       @media screen and (max-width: $mobile-breakpoint) {
         height: 64px;
+        width: 90px;
       }
     }
 
