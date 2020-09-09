@@ -77,8 +77,12 @@ footer {
         padding: 70px 0;
         border-top: 1px solid rgba(0, 26, 58, 0.1);
 
+        @media screen and (max-width: $tablet-breakpoint) {
+          flex-wrap: wrap;
+        }
+
         @media screen and (max-width: $mobile-breakpoint) {
-          flex-direction: column;
+          // flex-direction: column;
           margin-top: 50px;
           padding: 50px 0;
         }
@@ -88,10 +92,16 @@ footer {
         }
 
         .legal {
-          max-width: 750px;
+          max-width: 620px;
+          padding-right: 20px;
           margin-right: auto;
           @media screen and (max-width: $laptop-breakpoint) {
             margin-bottom: 2em;
+          }
+
+          @media screen and (max-width: $tablet-breakpoint) {
+            max-width: 100%;
+            padding-right: 0;
           }
         }
 
@@ -100,8 +110,14 @@ footer {
           @media screen and (max-width: $laptop-breakpoint) {
             margin: 0 20px;
           }
+
+          @media screen and (max-width: $tablet-breakpoint) {
+            margin: 0;
+          }
+
           @media screen and (max-width: $mobile-breakpoint) {
             margin: 1em 0;
+            width: 40%;
           }
 
           &.media {

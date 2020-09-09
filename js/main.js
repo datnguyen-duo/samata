@@ -295,7 +295,7 @@ $(function () {
       if ($(window).width() < 768) {
         underline.css("left", "calc(50% - 45px)");
       } else {
-        underline.css("left", "calc(50% - 65px)");
+        underline.css("left", "calc(50% - 58px)");
       }
       initTherapists();
     }
@@ -310,7 +310,7 @@ $(function () {
       if ($(window).width() < 768) {
         underline.css("left", "calc(100% - 110px)");
       } else {
-        underline.css("left", "calc(100% - 150px)");
+        underline.css("left", "calc(100% - 135px)");
       }
       initIndividuals();
     }

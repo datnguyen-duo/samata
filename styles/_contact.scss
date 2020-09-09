@@ -31,9 +31,9 @@ body.contact {
     .container {
       flex-wrap: wrap;
       justify-content: space-between;
-
+      align-items: center;
       .minor {
-        max-width: 40%;
+        max-width: 45%;
         @media screen and (max-width: $tablet-breakpoint) {
           max-width: 35%;
         }
@@ -68,7 +68,7 @@ body.contact {
         position: relative;
 
         @media screen and (max-width: $tablet-breakpoint) {
-          max-width: 50%;
+          max-width: 55%;
         }
         @media screen and (max-width: $mobile-breakpoint) {
           max-width: 100%;
@@ -127,7 +127,6 @@ body.contact {
         aside {
           border-top: none;
           margin-top: 0;
-          //   padding:
         }
       }
     }

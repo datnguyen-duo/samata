@@ -134,7 +134,7 @@ nav {
       padding: 10px 2em 50px;
     }
     .major {
-      max-width: 38vw;
+      max-width: 38.3vw;
       @media screen and (max-width: $mobile-breakpoint) {
         order: 1;
         max-width: 100%;
@@ -607,11 +607,10 @@ nav {
           position: absolute;
           bottom: 2vw;
           right: -100px;
-          max-width: 450px;
+          max-width: 400px;
           z-index: 3;
           @media screen and (max-width: $tablet-breakpoint) {
             right: -85px;
-            max-width: 410px;
           }
           @media screen and (max-width: $mobile-breakpoint) {
             position: relative;
@@ -821,15 +820,15 @@ nav {
 }
 
 #testimonials {
-  height: 50vw;
-  min-height: 700px;
+  height: 45vw;
+  min-height: 650px;
   position: relative;
   @media screen and (max-width: $mobile-breakpoint) {
     min-height: 850px;
   }
   header {
     width: 75%;
-    padding-top: 10vw;
+    padding-top: 8vw;
     z-index: 2;
     position: relative;
     display: flex;
@@ -939,7 +938,7 @@ nav {
       height: 100%;
       right: 0;
       top: 0;
-      padding-top: calc(10vw + 220px);
+      padding-top: calc(8vw + 220px);
 
       @media screen and (max-width: $laptop-breakpoint) {
         padding-top: calc(5vw + 220px);
