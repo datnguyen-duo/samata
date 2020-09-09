@@ -502,12 +502,18 @@ nav {
 
           .counter {
             height: 52px;
+            @media screen and (max-width: 900px) {
+              height: 30px;
+            }
           }
 
           @media screen and (max-width: 900px) {
             margin: 0;
             h2 {
               height: 50px;
+              @media screen and (max-width: 900px) {
+                height: 30px;
+              }
             }
             &:last-of-type {
               margin-top: 10px;
@@ -875,14 +881,11 @@ nav {
               }
             }
             .arrow {
-              margin: 0 15px;
-              width: 50px;
+              margin: 0 20px;
+              width: 25px;
               @media screen and (max-width: $laptop-breakpoint) {
-                margin: 0 5px;
+                margin: 0 10px;
               }
-              // @media screen and (max-width: $mobile-breakpoint) {
-              //   margin: 0 10px;
-              // }
             }
           }
         }

@@ -28,7 +28,6 @@ h1 {
   line-height: 1.05;
   @media screen and (max-width: $mobile-breakpoint) {
     font-size: 36px;
-    text-align: center;
   }
 }
 
@@ -36,7 +35,6 @@ h2 {
   font-size: 46px;
   @media screen and (max-width: $mobile-breakpoint) {
     font-size: 32px;
-    text-align: center;
   }
 }
 
@@ -254,7 +252,7 @@ ul.toggle {
         background-size: contain;
       }
       @media screen and (max-width: $mobile-breakpoint) {
-        height: 64px;
+        height: 50px;
         width: 90px;
       }
     }
