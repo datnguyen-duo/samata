@@ -27,9 +27,12 @@ footer {
 
         .img-wrapper {
           max-width: 280px;
+
+          @media screen and (max-width: $laptop-breakpoint) {
+            max-width: 220px;
+          }
           @media screen and (max-width: $mobile-breakpoint) {
             margin: 0;
-            max-width: 220px;
           }
         }
 

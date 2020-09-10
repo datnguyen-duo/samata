@@ -1344,7 +1344,7 @@ body.privacy-policy {
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
     * {
-      image-rendering: initial;
+      image-rendering: smooth;
     }
     #numbers .major .img-wrapper {
       height: 100%;
