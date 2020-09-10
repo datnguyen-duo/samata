@@ -632,6 +632,11 @@ nav {
       .img-wrapper {
         position: relative;
         max-height: 675px;
+        @media screen and (max-width: $mobile-breakpoint) {
+          display: flex;
+          flex-direction: column;
+        }
+
         .screen {
           width: 0%;
           position: absolute;
@@ -904,11 +909,11 @@ nav {
   min-height: 650px;
   position: relative;
   @media screen and (max-width: $mobile-breakpoint) {
-    min-height: 620px;
+    min-height: 750px;
   }
   header {
     width: 75%;
-    padding-top: 8vw;
+    padding-top: 6vw;
     z-index: 2;
     position: relative;
     display: flex;
@@ -1015,7 +1020,7 @@ nav {
       height: 100%;
       right: 0;
       top: 0;
-      padding-top: calc(8vw + 220px);
+      padding-top: calc(6vw + 220px);
 
       @media screen and (max-width: $laptop-breakpoint) {
         padding-top: calc(5vw + 220px);
@@ -1088,12 +1093,12 @@ nav {
           align-items: center;
           flex-direction: column;
           position: absolute;
-          left: calc(50% - 100px);
+          left: calc(50% - 85px);
           @media screen and (max-width: $laptop-breakpoint) {
-            left: calc(50% - 90px);
+            left: calc(50% - 73px);
           }
           @media screen and (max-width: $tablet-breakpoint) {
-            left: calc(50% - 75px);
+            left: calc(50% - 65px);
           }
 
           @media screen and (max-width: $mobile-breakpoint) {
@@ -1122,6 +1127,10 @@ nav {
           }
           p {
             opacity: 0.6;
+            text-align: center;
+            @media screen and (max-width: $mobile-breakpoint) {
+              text-align: left;
+            }
           }
         }
         &.content {

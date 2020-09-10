@@ -395,65 +395,65 @@ $(function () {
 //   });
 // });
 
-// function nextSlide() {
-//   let nextSlide = $(".next-slide");
-//   let content = nextSlide.find(".content");
-//   let activeSlide = $(".slide.active");
-//   let logo = $(".slide.next-slide .col:first-of-type");
-//   let num = $("#testimonials .nav-bar .major .num");
-//   let header = $("#testimonials header");
+function nextSlide() {
+  let nextSlide = $(".next-slide");
+  let content = nextSlide.find(".content");
+  let activeSlide = $(".slide.active");
+  let logo = $(".slide.next-slide .col:first-of-type");
+  let num = $("#testimonials .nav-bar .major .num");
+  let header = $("#testimonials header");
 
-//   var tl = gsap.timeline({
-//     onStart: function () {
-//       $(".next").addClass("disable-click");
-//       header.removeClass();
+  var tl = gsap.timeline({
+    onStart: function () {
+      $(".next").addClass("disable-click");
+      header.removeClass();
 
-//       if (activeSlide.next().is(":nth-child(2)")) {
-//         num.text("02");
-//         header.addClass("green");
-//       } else if (activeSlide.next().is(":nth-child(3)")) {
-//         num.text("03");
-//         header.addClass("blue");
-//       } else {
-//         num.text("01");
-//         header.addClass("navy");
-//       }
-//     },
-//     onComplete: function () {
-//       activeSlide.removeClass("active");
-//       nextSlide.addClass("active");
-//       if (!nextSlide.next().hasClass("nav-bar")) {
-//         nextSlide.next().addClass("next-slide");
-//       } else {
-//         $(".slide.one").addClass("next-slide");
-//       }
-//       nextSlide.removeClass("next-slide");
-//       $(".next").removeClass("disable-click");
-//     },
-//   });
+      if (activeSlide.next().is(":nth-child(2)")) {
+        num.text("02");
+        header.addClass("green");
+      } else if (activeSlide.next().is(":nth-child(3)")) {
+        num.text("03");
+        header.addClass("blue");
+      } else {
+        num.text("01");
+        header.addClass("navy");
+      }
+    },
+    onComplete: function () {
+      activeSlide.removeClass("active");
+      nextSlide.addClass("active");
+      if (!nextSlide.next().hasClass("nav-bar")) {
+        nextSlide.next().addClass("next-slide");
+      } else {
+        $(".slide.one").addClass("next-slide");
+      }
+      nextSlide.removeClass("next-slide");
+      $(".next").removeClass("disable-click");
+    },
+  });
 
-//   tl.to(nextSlide, { width: "100%", ease: "power1.inOut" });
-//   tl.set(nextSlide, { left: 0 });
-//   if ($(window).width() > 767) {
-//     tl.to(nextSlide, { width: "75%", ease: "power1.inOut" });
-//   } else {
-//     tl.to(nextSlide, { width: "100%", ease: "power1.inOut" });
-//   }
-//   if ($(window).width() < 1025) {
-//     tl.to(logo, { left: "calc(37.2vw - 360px)", ease: "power1.inOut" }, "-=1");
-//   } else if ($(window).width() < 1281) {
-//     tl.to(logo, { left: "calc(37.2vw - 380px)", ease: "power1.inOut" }, "-=1");
-//   } else {
-//     tl.to(logo, { left: "calc(37.2vw - 450px)", ease: "power1.inOut" }, "-=1");
-//   }
-//   tl.to(content, { opacity: 1, y: 0 });
-//   tl.set(nextSlide, { clearProps: "all" });
-//   tl.set(logo, { clearProps: "all" });
-//   tl.set(content, { clearProps: "all" });
-// }
+  tl.to(nextSlide, { width: "100%", ease: "power1.inOut" });
+  tl.set(nextSlide, { left: 0 });
+  if ($(window).width() > 767) {
+    tl.to(nextSlide, { width: "75%", ease: "power1.inOut" });
+  } else {
+    tl.to(nextSlide, { width: "100%", ease: "power1.inOut" });
+  }
+  if ($(window).width() < 1025) {
+    tl.to(logo, { left: "calc(37.2vw - 360px)", ease: "power1.inOut" }, "-=1");
+  } else if ($(window).width() < 1281) {
+    tl.to(logo, { left: "calc(37.2vw - 380px)", ease: "power1.inOut" }, "-=1");
+  } else {
+    tl.to(logo, { left: "calc(37.2vw - 450px)", ease: "power1.inOut" }, "-=1");
+  }
+  tl.to(content, { opacity: 1, y: 0 });
+  tl.set(nextSlide, { clearProps: "all" });
+  tl.set(logo, { clearProps: "all" });
+  tl.set(content, { clearProps: "all" });
+}
 
-// $(function () {
-//   $(".next").click(function () {
-//     nextSlide();
-//   });
-// });
+$(function () {
+  $(".next").click(function () {
+    nextSlide();
+  });
+});
