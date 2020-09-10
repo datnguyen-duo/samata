@@ -542,7 +542,9 @@ nav {
       @media screen and (max-width: 900px) {
         min-height: unset;
         height: 335px;
+        max-height: 335px;
         display: flex;
+        overflow: hidden;
       }
       img {
         min-height: 620px;
@@ -1341,6 +1343,9 @@ body.privacy-policy {
 
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
+    * {
+      image-rendering: initial;
+    }
     #numbers .major .img-wrapper {
       height: 100%;
 
