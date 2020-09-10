@@ -69,16 +69,16 @@ $(function () {
     $("#platform video").trigger("play");
   });
 
-  gsap.from("#platform", {
-    scrollTrigger: {
-      trigger: "#platform",
-      start: "top 30%",
-      once: true,
-      onEnter: function () {
-        $("#platform video").trigger("play");
-      },
-    },
-  });
+  // gsap.from("#platform", {
+  //   scrollTrigger: {
+  //     trigger: "#platform",
+  //     start: "top 30%",
+  //     once: true,
+  //     onEnter: function () {
+  //       $("#platform video").trigger("play");
+  //     },
+  //   },
+  // });
 });
 
 $(function () {
