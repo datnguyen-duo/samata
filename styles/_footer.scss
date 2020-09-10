@@ -3,6 +3,10 @@ footer {
   padding: 120px 0 0;
   font-weight: 400;
 
+  &.home {
+    border-top: 1px solid rgba(0, 26, 58, 0.1);
+  }
+
   @media screen and (max-width: $mobile-breakpoint) {
     padding: 70px 0 0;
   }
