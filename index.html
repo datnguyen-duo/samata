@@ -155,6 +155,9 @@
         <p class="blue-text">Watch the Video!</p>
         <img class="caret-down" src="/assets/caret-down.svg" alt="caret-down" />
         <div class="video-wrapper">
+          <div class="video-overlay">
+            <img src="/assets/video-play-btn.png" alt="video-play-btn" />
+          </div>
           <video
             controls
             poster="/assets/Final Platform Demo.jpg"
@@ -950,18 +953,27 @@
                   <div class="formkit-field">
                     <input
                       class="formkit-input"
+                      aria-label="First Name"
+                      name="fields[first_name]"
+                      required=""
+                      placeholder="First Name"
+                      type="text"
+                    />
+                  </div>
+                  <div class="formkit-field">
+                    <input
+                      class="formkit-input"
                       name="email_address"
                       aria-label="Email Address"
                       placeholder="Email Address"
                       required=""
                       type="email"
-                      style="margin-bottom: 30px"
                     />
                   </div>
-
                   <button
                     data-element="submit"
                     class="formkit-submit formkit-submit btn"
+                    style="margin-top: 30px"
                   >
                     <div class="formkit-spinner">
                       <div></div>
@@ -980,7 +992,7 @@
               help by calling the 24-hour National Suicide Prevention Lifeline
               at 1 (800) 273-8255, call 911, or go to your nearest emergency
               room. Please do not use Samata Health’s platform as it is not
-              equipped with first-responders who can immediately provide help
+              equipped with first responders who can immediately provide help
               and safety.
             </p>
             <ul class="col">

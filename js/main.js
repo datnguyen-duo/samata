@@ -69,16 +69,24 @@ $(function () {
     $("#platform video").trigger("play");
   });
 
-  // gsap.from("#platform", {
-  //   scrollTrigger: {
-  //     trigger: "#platform",
-  //     start: "top 30%",
-  //     once: true,
-  //     onEnter: function () {
-  //       $("#platform video").trigger("play");
-  //     },
-  //   },
-  // });
+  $(".video-overlay").click(function () {
+    $("#platform video").trigger("play");
+
+    gsap.to($(this), { opacity: 0, pointerEvents: "none" });
+  });
+
+  const video = document.querySelector("video");
+
+  video.addEventListener("pause", (event) => {
+    gsap.to($(".video-overlay"), { opacity: 1, pointerEvents: "initial" });
+  });
+
+  var isChrome =
+    /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+  if (!isChrome) {
+    $(".video-overlay").remove();
+  }
 });
 
 $(function () {
