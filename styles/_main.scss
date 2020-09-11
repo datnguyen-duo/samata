@@ -1072,6 +1072,11 @@ nav {
       }
       &.two {
         background: $color-teal;
+        .col {
+          h4 {
+            margin-top: 20px;
+          }
+        }
       }
       &.three {
         background: $color-blue-text;
