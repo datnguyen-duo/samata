@@ -58,7 +58,7 @@ $(function () {
   });
 
   $(".anchor-links li").click(function () {
-    let index = $(this).index() + 2;
+    let index = $(this).index() + 3;
     var scrollPos = $("body").children().eq(index).position().top;
     gsap.to(window, { duration: 0.7, scrollTo: scrollPos, ease: "power3.Out" });
   });
