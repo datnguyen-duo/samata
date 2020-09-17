@@ -55,6 +55,8 @@ $(function () {
         $(".sub-nav li").eq(i).addClass("active");
       }
     });
+
+    console.log($(".sub-nav li").scrollLeft());
   });
 
   $(".anchor-links li").click(function () {

@@ -276,10 +276,11 @@ nav.banner-nav {
     z-index: 33;
     overflow: hidden;
     height: 77px;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 2px -2px rgba(129, 133, 139, 0.3);
 
     ul {
       flex-direction: column;
