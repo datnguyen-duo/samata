@@ -457,3 +457,9 @@ $(function () {
     nextSlide();
   });
 });
+
+$(function () {
+  $(".nav-toggle").click(function () {
+    $(this).closest("nav").toggleClass("open");
+  });
+});

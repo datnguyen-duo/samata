@@ -1,9 +1,16 @@
+#landing {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: 80px;
+  }
+}
+
 body.contact {
   #landing {
     // margin-bottom: 100px;
     @media screen and (max-width: $mobile-breakpoint) {
       margin-bottom: 50px;
     }
+
     nav {
       ul {
         &.btn-wrapper {

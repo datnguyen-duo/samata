@@ -67,3 +67,9 @@ $(function () {
 $(function () {
   $(".hidden input[type='checkbox'").prop("checked", true);
 });
+
+$(function () {
+  $(".nav-toggle").click(function () {
+    $(this).closest("nav").toggleClass("open");
+  });
+});
