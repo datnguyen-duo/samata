@@ -56,7 +56,6 @@ $(function () {
       }
     });
 
-    console.log($(".sub-nav li").scrollLeft());
   });
 
   $(".anchor-links li").click(function () {

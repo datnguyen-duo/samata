@@ -295,6 +295,35 @@ nav.banner-nav {
         margin: 0 0 10px;
         li {
           padding: 10px 0;
+
+          &:last-of-type {
+            opacity: 1;
+            height: 0;
+            padding: 0;
+            margin: 0;
+            @media screen and (max-width: 400px) {
+              opacity: 0;
+              height: initial;
+              padding: 10px 0;
+              margin: 0;
+            }
+            .btn {
+              position: absolute;
+              top: 15px;
+              right: 5em;
+
+              @media screen and (max-width: 400px) {
+                position: static;
+                top: unset;
+                right: unset;
+              }
+            }
+          }
+
+          .btn {
+            padding: 13px 0;
+            width: 145px;
+          }
         }
         .btn {
           color: #fff;
@@ -336,12 +365,23 @@ nav.banner-nav {
     }
 
     &.open {
-      height: 332px;
+      height: 264px;
 
+      @media screen and (max-width: 400px) {
+        height: 332px;
+      }
       ul {
         li {
           opacity: 1;
           transition-delay: 0.3s;
+        }
+
+        &.btn-wrapper {
+          li {
+            &:last-of-type {
+              opacity: 1;
+            }
+          }
         }
       }
 
