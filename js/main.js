@@ -372,11 +372,21 @@ $(function () {
       var width = $(this).parent().width() - track.width();
 
       var perc = trackPos / width;
-      var n = Math.ceil(perc * 5000)
+      var n = Math.ceil(perc * 2500)
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-      var v1 = Math.ceil(perc * 20)
+      if (n < 1) {
+        n = 1;
+      }
+
+      var x = Math.ceil(perc * 2500)  
+
+      if (x < 1) {
+        x = 1
+      }
+
+      var v1 = (x * 5055)
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       var v2 = Math.ceil(perc * 300)

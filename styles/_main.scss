@@ -1256,10 +1256,17 @@ nav {
 
 #calculator {
   margin: 100px auto;
+  width: 100%;
 
   .container {
     max-width: 1100px;
+    width: 100%;
     flex-direction: column;
+    text-align: center;
+
+    h5 {
+      margin: 0.5em 0 2em;
+    }
     .tracker {
       margin-top: 6em;
       width: 100%;
@@ -1314,11 +1321,20 @@ nav {
             left: 50%;
             transform: translateX(-50%);
           }
+
+          p {
+            white-space: nowrap;
+            position: absolute;
+            bottom: -70%;
+            left: -50%;
+            margin: auto;
+          }
         }
       }
     }
     .row {
       margin-top: 5em;
+      margin-bottom: 1em;
       @media screen and (max-width: $mobile-breakpoint) {
         flex-direction: column;
       }
