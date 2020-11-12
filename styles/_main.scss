@@ -921,7 +921,7 @@ nav {
   header {
     width: 75%;
     padding-top: 6vw;
-    z-index: 2;
+    z-index: 3;
     position: relative;
     display: flex;
     justify-content: center;
@@ -1073,6 +1073,9 @@ nav {
       }
 
       &.next-slide {
+        z-index: 2;
+      }
+      &.is-visible {
         z-index: 1;
       }
       &.one {
@@ -1088,6 +1091,10 @@ nav {
       }
       &.three {
         background: $color-blue-text;
+      }
+
+      &.four {
+        background: $color-teal;
       }
 
       .col {
@@ -1248,7 +1255,7 @@ nav {
 }
 
 #calculator {
-  margin: 100px 0;
+  margin: 100px auto;
 
   .container {
     max-width: 1100px;

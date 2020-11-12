@@ -55,7 +55,6 @@ $(function () {
         $(".sub-nav li").eq(i).addClass("active");
       }
     });
-
   });
 
   $(".anchor-links li").click(function () {
@@ -356,48 +355,49 @@ $(function () {
   });
 });
 
-// $(function () {
-//   let track = $(".track");
-//   let num = $(".tracker .num");
-//   let val1 = $(".val-1");
-//   let val2 = $(".val-2");
-//   let val3 = $(".val-3");
-//   let bg = $(".tracker .bg");
+$(function () {
+  let track = $(".track");
+  let num = $(".tracker .num");
+  let val1 = $(".val-1");
+  let val2 = $(".val-2");
+  let val3 = $(".val-3");
+  let bg = $(".tracker .bg");
 
-//   track.draggable({
-//     axis: "x",
-//     containment: "parent",
-//     drag: function (event, ui) {
-//       let track = $(this);
-//       var trackPos = ui["position"]["left"];
-//       var width = $(this).parent().width() - track.width();
+  track.draggable({
+    axis: "x",
+    containment: "parent",
+    drag: function (event, ui) {
+      let track = $(this);
+      var trackPos = ui["position"]["left"];
+      var width = $(this).parent().width() - track.width();
 
-//       var perc = trackPos / width;
-//       var n = Math.ceil(perc * 10000)
-//         .toString()
-//         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      var perc = trackPos / width;
+      var n = Math.ceil(perc * 5000)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-//       var v1 = Math.ceil(perc * 20)
-//         .toString()
-//         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//       var v2 = Math.ceil(perc * 300)
-//         .toString()
-//         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//       var v3 = Math.ceil(perc * 400)
-//         .toString()
-//         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      var v1 = Math.ceil(perc * 20)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      var v2 = Math.ceil(perc * 300)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      var v3 = Math.ceil(perc * 400)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-//       num.text(n);
-//       val1.text(v1);
-//       val2.text(v2);
-//       val3.text(v3);
-//       bg.css("width", trackPos);
-//     },
-//   });
-// });
+      num.text(n);
+      val1.text(v1);
+      val2.text(v2);
+      val3.text(v3);
+      bg.css("width", trackPos);
+    },
+  });
+});
 
 function nextSlide() {
   let nextSlide = $(".next-slide");
+  let isVisible = $(".is-visible");
   let content = nextSlide.find(".content");
   let activeSlide = $(".slide.active");
   let logo = $(".slide.next-slide .col:first-of-type");
@@ -415,7 +415,10 @@ function nextSlide() {
       } else if (activeSlide.next().is(":nth-child(3)")) {
         num.text("03");
         header.addClass("blue");
-      } else {
+      } else if (activeSlide.next().is(":nth-child(4)")) {
+        num.text("04");
+        header.addClass("green");
+      }else {
         num.text("01");
         header.addClass("navy");
       }
@@ -428,7 +431,13 @@ function nextSlide() {
       } else {
         $(".slide.one").addClass("next-slide");
       }
+      if (!isVisible.next().hasClass("nav-bar")) {
+        isVisible.next().addClass("is-visible");
+      } else {
+        $(".slide.one").addClass("is-visible");
+      }
       nextSlide.removeClass("next-slide");
+      isVisible.removeClass("is-visible");
       $(".next").removeClass("disable-click");
     },
   });
