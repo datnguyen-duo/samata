@@ -108,6 +108,14 @@ img {
   width: 100%;
 }
 
+hr {
+  width: 150px;
+  height: 2px;
+  background: $color-navy;
+  border: none;
+  margin: 0 auto 50px;
+}
+
 .has-underline {
   position: relative;
   &:before {

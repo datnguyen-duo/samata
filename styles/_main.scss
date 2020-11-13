@@ -1255,7 +1255,7 @@ nav {
 }
 
 #calculator {
-  margin: 100px auto;
+  margin: 50px auto 0;
   width: 100%;
 
   .container {
@@ -1264,7 +1264,7 @@ nav {
     flex-direction: column;
     text-align: center;
 
-    h5 {
+    > h5 {
       margin: 0.5em 0 2em;
     }
     .tracker {
@@ -1340,13 +1340,22 @@ nav {
       }
       .col {
         margin-right: 4em;
+
         @media screen and (max-width: $mobile-breakpoint) {
           margin: 0 0 2em;
         }
         &:last-of-type {
           margin-right: 0;
         }
+
+        h5 {
+          margin-top: 0.5em;
+        }
       }
+    }
+    .sources {
+      font-size: 16px;
+      color: $color-grey;
     }
   }
 }
