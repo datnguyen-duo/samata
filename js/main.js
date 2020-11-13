@@ -372,23 +372,13 @@ $(function () {
       var width = $(this).parent().width() - track.width();
 
       var perc = trackPos / width;
-      var n = Math.ceil(perc * 2500)
+      var n = Math.ceil(perc * 2490 + 10)
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-      if (n < 1) {
-        n = 1;
-      }
+      var x = Math.ceil(perc * 2490 + 10);
 
-      var x = Math.ceil(perc * 2500)  
-
-      if (x < 1) {
-        x = 1
-      }
-
-      var v1 = (x * 5055)
-        .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      var v1 = (x * 5055).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       var v2 = Math.ceil(perc * 300)
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -428,7 +418,7 @@ function nextSlide() {
       } else if (activeSlide.next().is(":nth-child(4)")) {
         num.text("04");
         header.addClass("green");
-      }else {
+      } else {
         num.text("01");
         header.addClass("navy");
       }
