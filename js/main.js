@@ -321,6 +321,9 @@ $(function () {
       $(this).addClass("active");
       underline.css("left", "20px");
       initEmployers();
+      $("#how-it-works .container .steps header .title i").text(
+        "For Employers"
+      );
     }
   });
 
@@ -336,6 +339,9 @@ $(function () {
         underline.css("left", "calc(50% - 58px)");
       }
       initTherapists();
+      $("#how-it-works .container .steps header .title i").text(
+        "For Therapists"
+      );
     }
   });
 
@@ -351,6 +357,9 @@ $(function () {
         underline.css("left", "calc(100% - 135px)");
       }
       initIndividuals();
+      $("#how-it-works .container .steps header .title i").text(
+        "For Individuals"
+      );
     }
   });
 });
