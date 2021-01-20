@@ -424,13 +424,14 @@ function nextSlide() {
       } else if (activeSlide.next().is(":nth-child(3)")) {
         num.text("03");
         header.addClass("blue");
-      } else if (activeSlide.next().is(":nth-child(4)")) {
-        num.text("04");
-        header.addClass("green");
       } else {
         num.text("01");
         header.addClass("navy");
       }
+      // else {
+      //   num.text("01");
+      //   header.addClass("navy");
+      // }
     },
     onComplete: function () {
       activeSlide.removeClass("active");
