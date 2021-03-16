@@ -74,6 +74,14 @@ body.contact {
       .major {
         max-width: 55%;
         position: relative;
+        html.apply-now & {
+          margin: 0 auto;
+          padding-left: 100px;
+
+          @media screen and (max-width: $mobile-breakpoint) {
+            padding-left: 0;
+          }
+        }
         @media screen and (max-width: $mobile-breakpoint) {
           max-width: 100%;
         }
@@ -93,11 +101,18 @@ body.contact {
         }
         .form-wrapper {
           margin-top: 3em;
+
           @media screen and (max-width: $tablet-breakpoint) {
             margin-top: 2em;
           }
           input {
             margin-bottom: 1.5em;
+          }
+
+          &.apply-now {
+            .formkit-fields {
+              flex-direction: column;
+            }
           }
         }
 
