@@ -485,6 +485,17 @@ $(function () {
 });
 
 $(function () {
+  $(".banner-nav ul li a").on("click", function (e) {
+    if ($(this).is(".employers-toggle")) {
+      $(".toggle .employers").click();
+    }
+    if ($(this).is(".employees-toggle")) {
+      $(".toggle .individuals").click();
+    }
+  });
+});
+
+$(function () {
   $(".formkit-form").on("submit", function (event) {
     var origin = window.location.origin;
     var url = origin + "/mail/mail.php";
