@@ -358,7 +358,7 @@ $(function () {
       }
       initIndividuals();
       $("#how-it-works .container .steps header .title i").text(
-        "For Individuals"
+        "For Employees"
       );
     }
   });
