@@ -466,29 +466,75 @@
                   </div>
                   <h3>Frequently Asked Questions</h3>
                </div>
-               <div class="row">
-                  <div class="icon">
-                     <img src="/assets/checkmark.svg" alt="icon" />
-                  </div>
-                  <div class="col">
-                     <h4>Are there headcount minimums? What if we're a smaller company?</h4>
-                     <p>
-                        There is not! We work with teams of all sizes, and our current clients 
-                        range in size from 16 - 300+ employees.
-                     </p>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="icon">
-                     <img src="/assets/checkmark.svg" alt="icon" />
-                  </div>
-                  <div class="col">
-                     <h4>How does pricing work?</h4>
-                     <p>
-                        Our pricing is <b> <i> usage-based, </i> </b> so you only pay for 1:1 sessions with licensed therapists that your team <b> <i> actually uses. </i> </b> You’ll select the number of therapy sessions you want to cover for your team to make sure you can provide high quality care within your budget.
+              
+                        <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  background-color: #FFFFFF;
+}
 
-                     </p>
-                  </div>
+.active, .accordion:hover {
+  background-color: #EFFFFE; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h3>Frequently Asked Questions</h3>
+
+<button class="accordion">How does your employee benefit work?</button>
+<div class="panel">
+  <p>The core of our benefit is 1:1 sessions with licensed therapists. You’ll start by selecting the number of therapy sessions you want to cover for your team (we recommend between 10 & 20). Your employees can then book 45-minute sessions with any of the experienced, licensed therapists on our platform!</p>
+</div>
+
+<button class="accordion">How Does Your Pricing Work?</button>
+<div class="panel">
+  <p>Our pricing is usage-based. You’ll choose how many therapy sessions to cover for your team, and we’ll charge you monthly—but only for sessions your employees actually completed. Employer-sponsored sessions are completely free for employees!</p>
+</div>
+
+<button class="accordion">Do you have a headcount minimum? We’re a smaller team.</button>
+<div class="panel">
+  <p>Nope! Our clients range in size from 15 - 300+ employees.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+
+               
                </div>
             </div>
             <div class="major__therapists">
@@ -836,76 +882,7 @@
      
     <p>Employers see an average return of over 4:1 on every dollar they invest in employee mental health.</p>
   </div>
-</div>
-         
-         <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.accordion {
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  background-color: #FFFFFF;
-}
-
-.active, .accordion:hover {
-  background-color: #EFFFFE; 
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-}
-</style>
-</head>
-<body>
-
-<h3>Frequently Asked Questions</h3>
-
-<button class="accordion">How does your employee benefit work?</button>
-<div class="panel">
-  <p>The core of our benefit is 1:1 sessions with licensed therapists. You’ll start by selecting the number of therapy sessions you want to cover for your team (we recommend between 10 & 20). Your employees can then book 45-minute sessions with any of the experienced, licensed therapists on our platform!</p>
-</div>
-
-<button class="accordion">How Does Your Pricing Work?</button>
-<div class="panel">
-  <p>Our pricing is usage-based. You’ll choose how many therapy sessions to cover for your team, and we’ll charge you monthly—but only for sessions your employees actually completed. Employer-sponsored sessions are completely free for employees!</p>
-</div>
-
-<button class="accordion">Do you have a headcount minimum? We’re a smaller team.</button>
-<div class="panel">
-  <p>Nope! Our clients range in size from 15 - 300+ employees.</p>
-</div>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
-
-</body>
-</html>
-
-         
+</div>    
 
       <h4> <br /> <br /> <br /> <br /> Mental Health Cost Calculator for Employers</h4>
       <div class="tracker">
