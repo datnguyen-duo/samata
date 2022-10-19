@@ -31,38 +31,38 @@ $(function () {
   bannerLanding();
 });
 
-$(function () {
-  let subnav = $(".sub-nav");
-  let trigger = $("#products").position().top;
-  let scrollTop = $(window).scrollTop();
+// $(function () {
+//   let subnav = $(".sub-nav");
+//   let trigger = $("#products").position().top;
+//   let scrollTop = $(window).scrollTop();
 
-  let sections = $("section");
+//   let sections = $("section");
 
-  if (scrollTop > trigger) {
-    subnav.addClass("active");
-  }
+//   if (scrollTop > trigger) {
+//     subnav.addClass("active");
+//   }
 
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > trigger) {
-      subnav.addClass("active");
-    } else {
-      subnav.removeClass("active");
-    }
+//   $(window).scroll(function () {
+//     if ($(this).scrollTop() > trigger) {
+//       subnav.addClass("active");
+//     } else {
+//       subnav.removeClass("active");
+//     }
 
-    sections.each(function (i) {
-      if ($(this).position().top < $(window).scrollTop() + 100) {
-        $(".sub-nav li.active").removeClass("active");
-        $(".sub-nav li").eq(i).addClass("active");
-      }
-    });
-  });
+//     sections.each(function (i) {
+//       if ($(this).position().top < $(window).scrollTop() + 100) {
+//         $(".sub-nav li.active").removeClass("active");
+//         $(".sub-nav li").eq(i).addClass("active");
+//       }
+//     });
+//   });
 
-  $(".anchor-links li").click(function () {
-    let index = $(this).index() + 3;
-    var scrollPos = $("body").children().eq(index).position().top;
-    gsap.to(window, { duration: 0.7, scrollTo: scrollPos, ease: "power3.Out" });
-  });
-});
+//   $(".anchor-links li").click(function () {
+//     let index = $(this).index() + 3;
+//     var scrollPos = $("body").children().eq(index).position().top;
+//     gsap.to(window, { duration: 0.7, scrollTo: scrollPos, ease: "power3.Out" });
+//   });
+// });
 
 $(function () {
   $("#banner .has-play-btn").click(function () {
@@ -561,4 +561,46 @@ $(function () {
       },
     });
   });
+});
+
+window.addEventListener("load", (event) => {
+  var stepsPin = gsap.utils.toArray(".pin__steps");
+
+  if (window.innerWidth > 768) {
+    stepsPin.forEach((pin) => {
+      var steps = pin.querySelectorAll(".col .inner");
+
+      steps.forEach((step, i) => {
+        var index = i + 1;
+        var container = step.closest("section");
+        ScrollTrigger.create({
+          trigger: step,
+          start: "top 60%",
+          onEnter: () => container.classList.add("step-" + index),
+          onLeaveBack: () => container.classList.remove("step-" + index),
+        });
+      });
+    });
+  } else {
+    stepsPin.forEach((pin) => {
+      var prev = pin.querySelector(".pagination-btn-prev");
+      var next = pin.querySelector(".pagination-btn-next");
+      var i = 1;
+      var max = pin.querySelectorAll(".col .inner").length;
+      pin.closest("section").classList.add("step-1");
+
+      prev.addEventListener("click", function () {
+        if (i > 1) {
+          i--;
+          pin.closest("section").classList.remove("step-" + (i + 1));
+        }
+      });
+      next.addEventListener("click", function () {
+        if (i < max) {
+          i++;
+          pin.closest("section").classList.add("step-" + i);
+        }
+      });
+    });
+  }
 });
