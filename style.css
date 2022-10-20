@@ -15,8 +15,8 @@ body {
 h1,
 h2,
 h3,
-#benefit .container .row .col:nth-child(2) .inner span,
 h4,
+#benefit .container .row .col:nth-child(2) .inner span,
 h6 {
   font-family: "bilo";
   color: #001a3a;
@@ -43,19 +43,19 @@ h2 {
   }
 }
 
-h3, #benefit .container .row .col:nth-child(2) .inner span {
+h3 {
   font-size: 32px;
   font-weight: 400;
   margin: 0 0 0.2em 0;
   line-height: 1.2;
 }
 @media screen and (max-width: 767px) {
-  h3, #benefit .container .row .col:nth-child(2) .inner span {
+  h3 {
     font-size: 28px;
   }
 }
 
-h4 {
+h4, #benefit .container .row .col:nth-child(2) .inner span {
   font-size: 18px;
   font-weight: 500;
   font-family: "sofia-pro";
@@ -518,9 +518,9 @@ footer .top .container .form-wrapper .checkboxes .formkit-checkboxes label {
 .formkit-form[data-uid="06055a3632"] h1,
 .formkit-form[data-uid="06055a3632"] h2,
 .formkit-form[data-uid="06055a3632"] h3,
+.formkit-form[data-uid="06055a3632"] h4,
 .formkit-form[data-uid="06055a3632"] #benefit .container .row .col:nth-child(2) .inner span,
 #benefit .container .row .col:nth-child(2) .inner .formkit-form[data-uid="06055a3632"] span,
-.formkit-form[data-uid="06055a3632"] h4,
 .formkit-form[data-uid="06055a3632"] h5,
 .formkit-form[data-uid="06055a3632"] h6 {
   color: inherit;
@@ -1332,14 +1332,10 @@ nav.sub-nav ul.btn-wrapper li a {
 #benefit {
   padding: 6em 0 0;
 }
-#benefit > h2,
-#benefit > h5 {
+#benefit > h2 {
   text-align: center;
   max-width: 865px;
   margin: 0 auto;
-}
-#benefit > h5 {
-  margin-top: 0.2em;
 }
 #benefit .content {
   transition: transform 0.3s;
@@ -1528,7 +1524,7 @@ nav.sub-nav ul.btn-wrapper li a {
     padding: 0 2em;
   }
 }
-#benefit .container .row .col:nth-child(2) .inner h3, #benefit .container .row .col:nth-child(2) .inner span,
+#benefit .container .row .col:nth-child(2) .inner h4, #benefit .container .row .col:nth-child(2) .inner span,
 #benefit .container .row .col:nth-child(2) .inner span,
 #benefit .container .row .col:nth-child(2) .inner p {
   transition: color 0.3s;
@@ -1586,7 +1582,7 @@ nav.sub-nav ul.btn-wrapper li a {
 #benefit.step-1 .container .row .col:nth-child(2) .inner:nth-child(1) {
   opacity: 1;
 }
-#benefit.step-1 .container .row .col:nth-child(2) .inner:nth-child(1) h3, #benefit.step-1 .container .row .col:nth-child(2) .inner:nth-child(1) span,
+#benefit.step-1 .container .row .col:nth-child(2) .inner:nth-child(1) h4, #benefit.step-1 .container .row .col:nth-child(2) .inner:nth-child(1) span,
 #benefit.step-1 .container .row .col:nth-child(2) .inner:nth-child(1) span,
 #benefit.step-1 .container .row .col:nth-child(2) .inner:nth-child(1) p {
   color: #02a09e;
@@ -1614,7 +1610,7 @@ nav.sub-nav ul.btn-wrapper li a {
 #benefit.step-2 .container .row .col:nth-child(2) .inner:nth-child(2) {
   opacity: 1;
 }
-#benefit.step-2 .container .row .col:nth-child(2) .inner:nth-child(2) h3, #benefit.step-2 .container .row .col:nth-child(2) .inner:nth-child(2) span,
+#benefit.step-2 .container .row .col:nth-child(2) .inner:nth-child(2) h4, #benefit.step-2 .container .row .col:nth-child(2) .inner:nth-child(2) span,
 #benefit.step-2 .container .row .col:nth-child(2) .inner:nth-child(2) span,
 #benefit.step-2 .container .row .col:nth-child(2) .inner:nth-child(2) p {
   color: #02a09e;
@@ -1642,7 +1638,7 @@ nav.sub-nav ul.btn-wrapper li a {
 #benefit.step-3 .container .row .col:nth-child(2) .inner:nth-child(3) {
   opacity: 1;
 }
-#benefit.step-3 .container .row .col:nth-child(2) .inner:nth-child(3) h3, #benefit.step-3 .container .row .col:nth-child(2) .inner:nth-child(3) span,
+#benefit.step-3 .container .row .col:nth-child(2) .inner:nth-child(3) h4, #benefit.step-3 .container .row .col:nth-child(2) .inner:nth-child(3) span,
 #benefit.step-3 .container .row .col:nth-child(2) .inner:nth-child(3) span,
 #benefit.step-3 .container .row .col:nth-child(2) .inner:nth-child(3) p {
   color: #02a09e;
@@ -1670,7 +1666,7 @@ nav.sub-nav ul.btn-wrapper li a {
 #benefit.step-4 .container .row .col:nth-child(2) .inner:nth-child(4) {
   opacity: 1;
 }
-#benefit.step-4 .container .row .col:nth-child(2) .inner:nth-child(4) h3, #benefit.step-4 .container .row .col:nth-child(2) .inner:nth-child(4) span,
+#benefit.step-4 .container .row .col:nth-child(2) .inner:nth-child(4) h4, #benefit.step-4 .container .row .col:nth-child(2) .inner:nth-child(4) span,
 #benefit.step-4 .container .row .col:nth-child(2) .inner:nth-child(4) span,
 #benefit.step-4 .container .row .col:nth-child(2) .inner:nth-child(4) p {
   color: #02a09e;
@@ -1698,7 +1694,7 @@ nav.sub-nav ul.btn-wrapper li a {
 #benefit.step-5 .container .row .col:nth-child(2) .inner:nth-child(5) {
   opacity: 1;
 }
-#benefit.step-5 .container .row .col:nth-child(2) .inner:nth-child(5) h3, #benefit.step-5 .container .row .col:nth-child(2) .inner:nth-child(5) span,
+#benefit.step-5 .container .row .col:nth-child(2) .inner:nth-child(5) h4, #benefit.step-5 .container .row .col:nth-child(2) .inner:nth-child(5) span,
 #benefit.step-5 .container .row .col:nth-child(2) .inner:nth-child(5) span,
 #benefit.step-5 .container .row .col:nth-child(2) .inner:nth-child(5) p {
   color: #02a09e;
@@ -1726,7 +1722,7 @@ nav.sub-nav ul.btn-wrapper li a {
 #benefit.step-6 .container .row .col:nth-child(2) .inner:nth-child(6) {
   opacity: 1;
 }
-#benefit.step-6 .container .row .col:nth-child(2) .inner:nth-child(6) h3, #benefit.step-6 .container .row .col:nth-child(2) .inner:nth-child(6) span,
+#benefit.step-6 .container .row .col:nth-child(2) .inner:nth-child(6) h4, #benefit.step-6 .container .row .col:nth-child(2) .inner:nth-child(6) span,
 #benefit.step-6 .container .row .col:nth-child(2) .inner:nth-child(6) span,
 #benefit.step-6 .container .row .col:nth-child(2) .inner:nth-child(6) p {
   color: #02a09e;
@@ -1835,10 +1831,10 @@ nav.sub-nav ul.btn-wrapper li a {
   align-items: center;
   margin-bottom: 4em;
 }
-#platform .slider header h3 span, #platform .slider header #benefit .container .row .col:nth-child(2) .inner span span, #benefit .container .row .col:nth-child(2) .inner #platform .slider header span span {
+#platform .slider header h3 span {
   transition: all 0.3s;
 }
-#platform .slider header h3 span.active, #platform .slider header #benefit .container .row .col:nth-child(2) .inner span span.active, #benefit .container .row .col:nth-child(2) .inner #platform .slider header span span.active {
+#platform .slider header h3 span.active {
   color: #02a09e;
 }
 #platform .slider .slides {
@@ -1901,7 +1897,7 @@ nav.sub-nav ul.btn-wrapper li a {
     width: 40px;
   }
 }
-#platform .slider .slides .slide .row.content h3, #platform .slider .slides .slide #benefit .container .row.content .col:nth-child(2) .inner span, #benefit .container #platform .slider .slides .slide .row.content .col:nth-child(2) .inner span {
+#platform .slider .slides .slide .row.content h3 {
   margin: 0 1.3em 0 0.5em;
 }
 #platform .slider .slides .slide .row.content h5 {
@@ -1927,7 +1923,6 @@ nav.sub-nav ul.btn-wrapper li a {
   display: flex;
   align-items: center;
   margin-bottom: 150px;
-  overflow-x: hidden;
 }
 @media screen and (max-width: 900px) {
   #numbers {
@@ -1936,16 +1931,12 @@ nav.sub-nav ul.btn-wrapper li a {
   }
 }
 #numbers h2,
-#numbers h3,
-#numbers #benefit .container .row .col:nth-child(2) .inner span,
-#benefit .container .row .col:nth-child(2) .inner #numbers span {
+#numbers h3 {
   color: #fff;
 }
 @media screen and (max-width: 900px) {
   #numbers h2,
-  #numbers h3,
-  #numbers #benefit .container .row .col:nth-child(2) .inner span,
-  #benefit .container .row .col:nth-child(2) .inner #numbers span {
+  #numbers h3 {
     margin: 5px 0;
   }
 }
@@ -1998,6 +1989,9 @@ nav.sub-nav ul.btn-wrapper li a {
 }
 #numbers .minor .content .row .col {
   margin: 0 30px 0 0;
+}
+#numbers .minor .content .row .col:nth-child(2) {
+  min-width: 115px;
 }
 #numbers .minor .content .row .col .counter {
   height: 52px;
@@ -2196,7 +2190,7 @@ nav.sub-nav ul.btn-wrapper li a {
     padding: 30px;
   }
 }
-#how-it-works .container .minor .img-wrapper aside h4 {
+#how-it-works .container .minor .img-wrapper aside h4, #how-it-works #benefit .container .minor .img-wrapper aside .row .col:nth-child(2) .inner span, #benefit #how-it-works .container .minor .img-wrapper aside .row .col:nth-child(2) .inner span, #how-it-works #benefit .container .row .col:nth-child(2) .inner .minor .img-wrapper aside span, #benefit #how-it-works .container .row .col:nth-child(2) .inner .minor .img-wrapper aside span {
   margin-bottom: 1em;
 }
 #how-it-works .container .minor .img-wrapper aside .aside__therapists,
@@ -2299,7 +2293,7 @@ nav.sub-nav ul.btn-wrapper li a {
   margin-top: 0;
   min-width: 60px;
 }
-#how-it-works .container .major .row.header h3, #how-it-works #benefit .container .major .row.header .col:nth-child(2) .inner span, #benefit #how-it-works .container .major .row.header .col:nth-child(2) .inner span {
+#how-it-works .container .major .row.header h3 {
   max-width: 400px;
 }
 #how-it-works .container .major .row .icon {
@@ -2332,7 +2326,7 @@ nav.sub-nav ul.btn-wrapper li a {
 #how-it-works .container .steps header .title {
   margin-bottom: -6px;
 }
-#how-it-works .container .steps header .title h3, #how-it-works #benefit .container .steps header .title .row .col:nth-child(2) .inner span, #benefit #how-it-works .container .steps header .title .row .col:nth-child(2) .inner span, #how-it-works #benefit .container .row .col:nth-child(2) .inner .steps header .title span, #benefit #how-it-works .container .row .col:nth-child(2) .inner .steps header .title span {
+#how-it-works .container .steps header .title h3 {
   margin-bottom: 6px;
 }
 #how-it-works .container .steps .row-container {
@@ -2587,7 +2581,7 @@ nav.sub-nav ul.btn-wrapper li a {
 #testimonials .slider .slide.two {
   background: #02a09e;
 }
-#testimonials .slider .slide.two .col h4 {
+#testimonials .slider .slide.two .col h4, #testimonials .slider .slide.two #benefit .container .row .col:nth-child(2) .inner span, #benefit .container .row #testimonials .slider .slide.two .col:nth-child(2) .inner span {
   margin-top: 20px;
 }
 #testimonials .slider .slide.three {
@@ -2605,7 +2599,7 @@ nav.sub-nav ul.btn-wrapper li a {
     padding-right: 20px;
   }
 }
-#testimonials .slider .slide .col h4 {
+#testimonials .slider .slide .col h4, #testimonials .slider .slide #benefit .container .row .col:nth-child(2) .inner span, #benefit .container .row #testimonials .slider .slide .col:nth-child(2) .inner span {
   font-family: "bilo";
   color: #fff;
 }
@@ -2961,11 +2955,13 @@ body.privacy-policy article ul li {
   list-style: initial;
   margin: 10px 0;
 }
-body.privacy-policy h3, body.privacy-policy #benefit .container .row .col:nth-child(2) .inner span, #benefit .container .row .col:nth-child(2) .inner body.privacy-policy span,
-body.privacy-policy h4 {
+body.privacy-policy h3,
+body.privacy-policy h4,
+body.privacy-policy #benefit .container .row .col:nth-child(2) .inner span,
+#benefit .container .row .col:nth-child(2) .inner body.privacy-policy span {
   margin-bottom: 0.5em;
 }
-body.privacy-policy h4 {
+body.privacy-policy h4, body.privacy-policy #benefit .container .row .col:nth-child(2) .inner span, #benefit .container .row .col:nth-child(2) .inner body.privacy-policy span {
   margin-top: 1.5em;
 }
 body.privacy-policy p {
@@ -3051,17 +3047,17 @@ body.contact #landing .container .minor h1 {
 body.contact #landing .container .minor .row {
   position: relative;
 }
-body.contact #landing .container .minor .row h4 {
+body.contact #landing .container .minor .row h4, body.contact #landing #benefit .container .minor .row .col:nth-child(2) .inner span, #benefit body.contact #landing .container .minor .row .col:nth-child(2) .inner span {
   opacity: 0;
 }
 @media screen and (max-width: 767px) {
-  body.contact #landing .container .minor .row h4 {
+  body.contact #landing .container .minor .row h4, body.contact #landing #benefit .container .minor .row .col:nth-child(2) .inner span, #benefit body.contact #landing .container .minor .row .col:nth-child(2) .inner span {
     width: 100%;
     text-align: center;
     max-width: 100%;
   }
 }
-body.contact #landing .container .minor .row h4.therapists, body.contact #landing .container .minor .row h4.individuals {
+body.contact #landing .container .minor .row h4.therapists, body.contact #landing #benefit .container .minor .row .col:nth-child(2) .inner span.therapists, #benefit body.contact #landing .container .minor .row .col:nth-child(2) .inner span.therapists, body.contact #landing .container .minor .row h4.individuals, body.contact #landing #benefit .container .minor .row .col:nth-child(2) .inner span.individuals, #benefit body.contact #landing .container .minor .row .col:nth-child(2) .inner span.individuals {
   position: absolute;
   left: 0;
 }
@@ -3137,20 +3133,20 @@ body.contact footer .top .container aside {
   border-top: none;
   margin-top: 0;
 }
-body.contact.init__employers #landing .container .minor .row h4.employers {
+body.contact.init__employers #landing .container .minor .row h4.employers, body.contact.init__employers #landing #benefit .container .minor .row .col:nth-child(2) .inner span.employers, #benefit body.contact.init__employers #landing .container .minor .row .col:nth-child(2) .inner span.employers {
   opacity: 1;
 }
 body.contact.init__employers #landing .container .major .major__employers {
   opacity: 1;
 }
-body.contact.init__therapists #landing .container .minor .row h4.therapists {
+body.contact.init__therapists #landing .container .minor .row h4.therapists, body.contact.init__therapists #landing #benefit .container .minor .row .col:nth-child(2) .inner span.therapists, #benefit body.contact.init__therapists #landing .container .minor .row .col:nth-child(2) .inner span.therapists {
   opacity: 1;
 }
 body.contact.init__therapists #landing .container .major .major__therapists {
   opacity: 1;
   pointer-events: initial;
 }
-body.contact.init__individuals #landing .container .minor .row h4.individuals {
+body.contact.init__individuals #landing .container .minor .row h4.individuals, body.contact.init__individuals #landing #benefit .container .minor .row .col:nth-child(2) .inner span.individuals, #benefit body.contact.init__individuals #landing .container .minor .row .col:nth-child(2) .inner span.individuals {
   opacity: 1;
   pointer-events: initial;
 }

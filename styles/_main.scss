@@ -247,15 +247,10 @@ nav {
 
 #benefit {
   padding: 6em 0 0;
-  > h2,
-  > h5 {
+  > h2 {
     text-align: center;
     max-width: 865px;
     margin: 0 auto;
-  }
-
-  > h5 {
-    margin-top: 0.2em;
   }
 
   .content {
@@ -450,7 +445,7 @@ nav {
               min-width: 100vw;
               padding: 0 2em;
             }
-            h3,
+            h4,
             span,
             p {
               transition: color 0.3s;
@@ -458,7 +453,7 @@ nav {
             span {
               position: absolute;
               left: 0;
-              @extend h3;
+              @extend h4;
               @media screen and (max-width: $mobile-breakpoint) {
                 position: relative;
               }
@@ -527,7 +522,7 @@ nav {
               .inner {
                 &:nth-child(#{$i}) {
                   opacity: 1;
-                  h3,
+                  h4,
                   span,
                   p {
                     color: $color-teal;
@@ -746,7 +741,6 @@ nav {
   display: flex;
   align-items: center;
   margin-bottom: 150px;
-  overflow-x: hidden;
   @media screen and (max-width: 900px) {
     flex-direction: column;
     margin-bottom: 100px;
@@ -807,6 +801,9 @@ nav {
 
         .col {
           margin: 0 30px 0 0;
+          &:nth-child(2) {
+            min-width: 115px;
+          }
 
           .counter {
             height: 52px;
