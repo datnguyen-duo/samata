@@ -576,8 +576,27 @@ window.addEventListener("load", (event) => {
         ScrollTrigger.create({
           trigger: step,
           start: "top 60%",
-          onEnter: () => container.classList.add("step-" + index),
-          onLeaveBack: () => container.classList.remove("step-" + index),
+          onEnter: function () {
+            container.classList.remove(
+              "step-1",
+              "step-2",
+              "step-3",
+              "step-4",
+              "step-5",
+              "step-6"
+            );
+            container.classList.add("step-" + index);
+          },
+          onLeaveBack: function () {
+            container.classList.remove(
+              "step-1",
+              "step-2",
+              "step-3",
+              "step-4",
+              "step-5",
+              "step-6"
+            );
+          },
         });
       });
     });
