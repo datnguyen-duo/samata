@@ -1349,6 +1349,7 @@ nav.sub-nav ul.btn-wrapper li a {
   display: flex;
   align-items: flex-start;
   margin-top: 6em;
+  margin-bottom: 6em;
   width: 100%;
 }
 @media screen and (max-width: 767px) {
@@ -1359,7 +1360,7 @@ nav.sub-nav ul.btn-wrapper li a {
 }
 #benefit .container .row .col:nth-child(1) {
   flex-shrink: 0;
-  margin-right: 10vw;
+  margin-right: 20vw;
   position: sticky;
   top: calc((100vh - 75vh) / 2);
 }
@@ -2764,6 +2765,7 @@ nav.sub-nav ul.btn-wrapper li a {
 
 #did-you-know {
   text-align: center;
+  margin-top: 6em;
 }
 #did-you-know .container {
   margin-top: 3em;

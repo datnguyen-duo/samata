@@ -265,6 +265,7 @@ nav {
       display: flex;
       align-items: flex-start;
       margin-top: 6em;
+      margin-bottom: 6em;
       width: 100%;
 
       @media screen and (max-width: $mobile-breakpoint) {
@@ -274,7 +275,7 @@ nav {
       .col {
         &:nth-child(1) {
           flex-shrink: 0;
-          margin-right: 10vw;
+          margin-right: 20vw;
           position: sticky;
           top: calc((100vh - 75vh) / 2);
           @media screen and (max-width: $tablet-breakpoint) {
@@ -1558,6 +1559,7 @@ nav {
 
 #did-you-know {
   text-align: center;
+  margin-top: 6em;
   .container {
     margin-top: 3em;
     .row {
