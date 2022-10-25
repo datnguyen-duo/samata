@@ -64,30 +64,30 @@ $(function () {
 //   });
 // });
 
-$(function () {
-  $("#banner .has-play-btn").click(function () {
-    $("#platform video").trigger("play");
-  });
+// $(function () {
+//   $("#banner .has-play-btn").click(function () {
+//     $("#platform video").trigger("play");
+//   });
 
-  $(".video-overlay").click(function () {
-    $("#platform video").trigger("play");
+//   $(".video-overlay").click(function () {
+//     $("#platform video").trigger("play");
 
-    gsap.to($(this), { opacity: 0, pointerEvents: "none" });
-  });
+//     gsap.to($(this), { opacity: 0, pointerEvents: "none" });
+//   });
 
-  const video = document.querySelector("video");
+//   const video = document.querySelector("video");
 
-  video.addEventListener("pause", (event) => {
-    gsap.to($(".video-overlay"), { opacity: 1, pointerEvents: "initial" });
-  });
+//   video.addEventListener("pause", (event) => {
+//     gsap.to($(".video-overlay"), { opacity: 1, pointerEvents: "initial" });
+//   });
 
-  var isChrome =
-    /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+//   var isChrome =
+//     /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
-  if (!isChrome) {
-    $(".video-overlay").remove();
-  }
-});
+//   if (!isChrome) {
+//     $(".video-overlay").remove();
+//   }
+// });
 
 $(function () {
   let cta = $("#products .container .col .btn");
@@ -596,6 +596,7 @@ window.addEventListener("load", (event) => {
               "step-5",
               "step-6"
             );
+            container.classList.add("step-" + (index - 1));
           },
         });
       });
