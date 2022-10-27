@@ -246,7 +246,10 @@ nav {
 }
 
 #benefit {
-  padding: 6em 0 0;
+  padding: 20vh 0 0;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 6em 0 0;
+  }
   > h2 {
     text-align: center;
     max-width: 865px;
@@ -258,26 +261,32 @@ nav {
   }
 
   .container {
+    max-width: 100%;
+    padding: 0;
     @media screen and (max-width: $mobile-breakpoint) {
       padding: 0;
+      overflow: hidden;
     }
     .row {
       display: flex;
       align-items: flex-start;
       margin-top: 6em;
-      margin-bottom: 6em;
+      margin-bottom: 12em;
       width: 100%;
+      padding: 0 12vw;
 
       @media screen and (max-width: $mobile-breakpoint) {
         flex-direction: column;
         margin-top: 3em;
+        padding: 0;
       }
       .col {
         &:nth-child(1) {
           flex-shrink: 0;
           margin-right: 15vw;
           position: sticky;
-          top: calc((100vh - 75vh) / 2);
+          top: calc((100vh - 60vh) / 2);
+          z-index: 1;
           @media screen and (max-width: $tablet-breakpoint) {
             top: calc((100vh - 60vh) / 2);
           }
@@ -288,11 +297,32 @@ nav {
             margin: 0 auto;
           }
 
+          h2 {
+            width: 100vw;
+            text-align: center;
+            left: -12vw;
+            position: absolute;
+            top: -20vh;
+            height: 12vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            @media screen and (max-width: $mobile-breakpoint) {
+              width: auto;
+              left: unset;
+              position: relative;
+              top: unset;
+              height: unset;
+              margin-bottom: 1em;
+            }
+          }
+
           .circle {
             position: relative;
 
-            height: 75vh;
-            width: 75vh;
+            height: 60vh;
+            width: 60vh;
             border-radius: 50%;
             border: 1px solid $color-navy;
             display: flex;
@@ -306,8 +336,8 @@ nav {
             }
 
             @media screen and (max-width: $mobile-breakpoint) {
-              height: calc(100vw - 60px);
-              width: calc(100vw - 60px);
+              height: calc(100vw - 80px);
+              width: calc(100vw - 80px);
             }
             .content {
               text-align: center;
@@ -436,7 +466,7 @@ nav {
           .inner {
             position: relative;
             padding-left: 3em;
-            margin: 30vh 0;
+            margin: 20vh 0;
             opacity: 0.5;
             transition: opacity 0.3s;
             @media screen and (max-width: $mobile-breakpoint) {
@@ -1560,7 +1590,7 @@ nav {
 
 #did-you-know {
   text-align: center;
-  margin-top: 6em;
+  margin-top: 10vw;
   .container {
     margin-top: 3em;
     .row {
@@ -1615,7 +1645,7 @@ nav {
 }
 
 #calculator {
-  margin: 100px auto 0;
+  margin: 10vw auto 0;
   width: 100%;
 
   .container {

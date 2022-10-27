@@ -1330,7 +1330,12 @@ nav.sub-nav ul.btn-wrapper li a {
 }
 
 #benefit {
-  padding: 6em 0 0;
+  padding: 20vh 0 0;
+}
+@media screen and (max-width: 767px) {
+  #benefit {
+    padding: 6em 0 0;
+  }
 }
 #benefit > h2 {
   text-align: center;
@@ -1340,29 +1345,37 @@ nav.sub-nav ul.btn-wrapper li a {
 #benefit .content {
   transition: transform 0.3s;
 }
+#benefit .container {
+  max-width: 100%;
+  padding: 0;
+}
 @media screen and (max-width: 767px) {
   #benefit .container {
     padding: 0;
+    overflow: hidden;
   }
 }
 #benefit .container .row {
   display: flex;
   align-items: flex-start;
   margin-top: 6em;
-  margin-bottom: 6em;
+  margin-bottom: 12em;
   width: 100%;
+  padding: 0 12vw;
 }
 @media screen and (max-width: 767px) {
   #benefit .container .row {
     flex-direction: column;
     margin-top: 3em;
+    padding: 0;
   }
 }
 #benefit .container .row .col:nth-child(1) {
   flex-shrink: 0;
   margin-right: 15vw;
   position: sticky;
-  top: calc((100vh - 75vh) / 2);
+  top: calc((100vh - 60vh) / 2);
+  z-index: 1;
 }
 @media screen and (max-width: 1082px) {
   #benefit .container .row .col:nth-child(1) {
@@ -1376,10 +1389,32 @@ nav.sub-nav ul.btn-wrapper li a {
     margin: 0 auto;
   }
 }
+#benefit .container .row .col:nth-child(1) h2 {
+  width: 100vw;
+  text-align: center;
+  left: -12vw;
+  position: absolute;
+  top: -20vh;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+@media screen and (max-width: 767px) {
+  #benefit .container .row .col:nth-child(1) h2 {
+    width: auto;
+    left: unset;
+    position: relative;
+    top: unset;
+    height: unset;
+    margin-bottom: 1em;
+  }
+}
 #benefit .container .row .col:nth-child(1) .circle {
   position: relative;
-  height: 75vh;
-  width: 75vh;
+  height: 60vh;
+  width: 60vh;
   border-radius: 50%;
   border: 1px solid #001a3a;
   display: flex;
@@ -1395,8 +1430,8 @@ nav.sub-nav ul.btn-wrapper li a {
 }
 @media screen and (max-width: 767px) {
   #benefit .container .row .col:nth-child(1) .circle {
-    height: calc(100vw - 60px);
-    width: calc(100vw - 60px);
+    height: calc(100vw - 80px);
+    width: calc(100vw - 80px);
   }
 }
 #benefit .container .row .col:nth-child(1) .circle .content {
@@ -1512,7 +1547,7 @@ nav.sub-nav ul.btn-wrapper li a {
 #benefit .container .row .col:nth-child(2) .inner {
   position: relative;
   padding-left: 3em;
-  margin: 30vh 0;
+  margin: 20vh 0;
   opacity: 0.5;
   transition: opacity 0.3s;
 }
@@ -2765,7 +2800,7 @@ nav.sub-nav ul.btn-wrapper li a {
 
 #did-you-know {
   text-align: center;
-  margin-top: 6em;
+  margin-top: 10vw;
 }
 #did-you-know .container {
   margin-top: 3em;
@@ -2828,7 +2863,7 @@ nav.sub-nav ul.btn-wrapper li a {
 }
 
 #calculator {
-  margin: 100px auto 0;
+  margin: 10vw auto 0;
   width: 100%;
 }
 #calculator .container {

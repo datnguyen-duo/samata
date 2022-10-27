@@ -618,6 +618,7 @@ window.addEventListener("load", (event) => {
       next.addEventListener("click", function () {
         if (i < max) {
           i++;
+          pin.closest("section").classList.remove("step-" + (i - 1));
           pin.closest("section").classList.add("step-" + i);
         }
       });
