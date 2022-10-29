@@ -1430,8 +1430,8 @@ nav.sub-nav ul.btn-wrapper li a {
 }
 @media screen and (max-width: 767px) {
   #benefit .container .row .col:nth-child(1) .circle {
-    height: calc(100vw - 80px);
-    width: calc(100vw - 80px);
+    height: calc(100vw - 100px);
+    width: calc(100vw - 100px);
   }
 }
 #benefit .container .row .col:nth-child(1) .circle .content {

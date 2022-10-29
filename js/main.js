@@ -613,6 +613,7 @@ window.addEventListener("load", (event) => {
         if (i > 1) {
           i--;
           pin.closest("section").classList.remove("step-" + (i + 1));
+          pin.closest("section").classList.add("step-" + i);
         }
       });
       next.addEventListener("click", function () {

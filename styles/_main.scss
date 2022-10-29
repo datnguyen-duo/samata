@@ -336,8 +336,8 @@ nav {
             }
 
             @media screen and (max-width: $mobile-breakpoint) {
-              height: calc(100vw - 80px);
-              width: calc(100vw - 80px);
+              height: calc(100vw - 100px);
+              width: calc(100vw - 100px);
             }
             .content {
               text-align: center;
